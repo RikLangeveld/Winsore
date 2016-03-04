@@ -5,7 +5,9 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winsore", "Winsore\Winsore\Winsore.csproj", "{B11BD462-73DE-41B5-B1B5-BEE8A19E3156}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WinsoreContent", "Winsore\WinsoreContent\WinsoreContent.contentproj", "{49FE5E7E-183C-4577-B9B5-3868521C874C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinsoreContent", "Winsore\WinsoreContent\WinsoreContent.contentproj", "{49FE5E7E-183C-4577-B9B5-3868521C874C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameManagement", "..\..\GameManagement\GameManagement.csproj", "{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{B11BD462-73DE-41B5-B1B5-BEE8A19E3156}.Release|x86.Build.0 = Release|x86
 		{49FE5E7E-183C-4577-B9B5-3868521C874C}.Debug|x86.ActiveCfg = Debug|x86
 		{49FE5E7E-183C-4577-B9B5-3868521C874C}.Release|x86.ActiveCfg = Release|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Debug|x86.ActiveCfg = Debug|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Debug|x86.Build.0 = Debug|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Release|x86.ActiveCfg = Release|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
