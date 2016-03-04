@@ -10,6 +10,15 @@
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb</Output>
       <Time>2016-03-04T15:35:15.504541+01:00</Time>
     </Item>
+    <Item>
+      <Source>spr_hero_placeholder.png</Source>
+      <Name>spr_hero_placeholder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb</Output>
+      <Time>2016-03-04T16:53:05.3206048+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{49FE5E7E-183C-4577-B9B5-3868521C874C}</ContentProjectGUID>

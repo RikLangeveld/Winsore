@@ -1,1 +1,2 @@
 Content\Grass.xnb
+Content\spr_hero_placeholder.xnb
