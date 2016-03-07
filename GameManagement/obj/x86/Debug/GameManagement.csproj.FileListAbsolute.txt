@@ -1,0 +1,6 @@
+C:\Users\rik\Desktop\GameManagement\bin\x86\Debug\GameManagement.dll
+C:\Users\rik\Desktop\GameManagement\bin\x86\Debug\GameManagement.pdb
+C:\Users\rik\Desktop\GameManagement\obj\x86\Debug\GameManagement.csprojResolveAssemblyReference.cache
+C:\Users\rik\Desktop\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\rik\Desktop\GameManagement\obj\x86\Debug\GameManagement.dll
+C:\Users\rik\Desktop\GameManagement\obj\x86\Debug\GameManagement.pdb
