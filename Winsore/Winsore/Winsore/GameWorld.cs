@@ -15,7 +15,7 @@ namespace Winsore
         {
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
-            
+
             // Add the grass background to the gameWorld
             this.Add(background);
 

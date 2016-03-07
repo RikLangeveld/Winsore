@@ -16,14 +16,22 @@ namespace Winsore
     /// </summary>
     public class Winsore : GameEnvironment
     {
+        protected Vector2 screenSize;
 
         public Winsore()
         {
             Content.RootDirectory = "Content";
 
             // Zet het beeld naar fullscreen. 
-            graphics.IsFullScreen = true; 
-        
+            graphics.IsFullScreen = true;
+
+            // zet de buffer hoogte naar 1080 en breedte naar 1920
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferWidth = 1920;
+
+            // Zet de breedte en hoogte van het scherm in een Vector2
+            screenSize = new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+
         }
 
         /// <summary>
@@ -35,7 +43,6 @@ namespace Winsore
 
             base.LoadContent();
 
-
             // TODO: use this.Content to load your game content here
             // Adds a playingstate to the game
             gameStateManager.AddGameState("playingState", new GameWorld());
@@ -44,5 +51,7 @@ namespace Winsore
             gameStateManager.SwitchTo("playingState");
         }
 
+        // Een getter voor de screenSize
+        public Vector2 ScreenSize { get { return screenSize; } }
     }
 }
