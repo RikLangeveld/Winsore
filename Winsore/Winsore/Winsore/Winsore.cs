@@ -26,12 +26,7 @@ namespace Winsore
             graphics.IsFullScreen = true;
 
             // zet de buffer hoogte naar 1080 en breedte naar 1920
-            graphics.PreferredBackBufferHeight = 1080;
-            graphics.PreferredBackBufferWidth = 1920;
-
-            // Zet de breedte en hoogte van het scherm in een Vector2
-            screenSize = new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
-
+           
         }
 
         /// <summary>
@@ -49,9 +44,8 @@ namespace Winsore
 
             // sets the gamestate to playing
             gameStateManager.SwitchTo("playingState");
-        }
 
-        // Een getter voor de screenSize
-        public Vector2 ScreenSize { get { return screenSize; } }
+            screen = new Point(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+        }
     }
 }

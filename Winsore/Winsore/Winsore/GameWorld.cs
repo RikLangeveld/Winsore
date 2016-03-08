@@ -1,4 +1,5 @@
 ﻿using GameManagement.gameobjects;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace Winsore
             this.Add(background);
 
             this.Add(player);
+        }
+
+        public bool IsOutsideRoom(Vector2 position, int width, int height)
+        {
+
+            if (position.X > 0 && position.X + width  < Winsore.Screen.X &&
+                position.Y > 0 && position.Y + height < Winsore.Screen.Y)
+                return false;
+            else
+                return true;
         }
     }
 }
