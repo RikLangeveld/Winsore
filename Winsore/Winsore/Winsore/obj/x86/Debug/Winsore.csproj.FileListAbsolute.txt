@@ -22,6 +22,7 @@ C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Wins
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.exe
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.pdb
+C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Winsore.exe
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Winsore.pdb
