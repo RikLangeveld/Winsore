@@ -57,6 +57,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enemy.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,7 +71,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\GameManagement\GameManagement.csproj">
+    <ProjectReference Include="..\..\..\GameManagement\GameManagement.csproj">
       <Project>{6ceb5f37-0bfa-4a0d-8db7-b25ecd81caae}</Project>
       <Name>GameManagement</Name>
     </ProjectReference>
