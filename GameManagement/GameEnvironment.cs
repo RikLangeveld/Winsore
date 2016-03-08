@@ -9,7 +9,6 @@ public class GameEnvironment : Game
     protected SpriteBatch spriteBatch;
     protected InputHelper inputHelper;
     protected Matrix spriteScale;
-    
     protected static Point screen;
     protected static GameStateManager gameStateManager;
     protected static Random random;
