@@ -28,6 +28,9 @@ namespace Winsore
             // zet de buffer hoogte naar 1080 en breedte naar 1920
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
+
+            //maak de mouse visable in de game om te kunnen mikken
+            IsMouseVisible = true;
         }
 
         /// <summary>

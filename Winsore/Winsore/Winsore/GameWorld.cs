@@ -11,18 +11,21 @@ namespace Winsore
         private SpriteGameObject background;
         private Player player;
         private Enemy enemy;
+        private Projectile projectile;
 
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
             enemy = new Enemy("spr_enemy_placeholder");
+            projectile = new Projectile("arrow_projectile");
 
             // Add the grass background to the gameWorld
             this.Add(background);
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);
+            this.Add(projectile);
         }
 
         /// <summary>
