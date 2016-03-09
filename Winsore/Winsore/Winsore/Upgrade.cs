@@ -7,12 +7,11 @@ namespace Winsore
 {
     class Upgrade
     {
-        SpriteGameObject type;
-
+        protected SpriteGameObject isOfType;
 
         public Upgrade(SpriteGameObject type)
         {
-
+            isOfType = type;
         }
     }
 }

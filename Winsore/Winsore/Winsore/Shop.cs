@@ -14,7 +14,17 @@ namespace Winsore
         {
             upgrades = new List<Upgrade>();
 
-            upgrades.Add(new Upgrade(new Player("spr_hero_placeholder")));
+            
+        }
+
+        public void AddUpgrade(SpriteGameObject gameObject, string upgradeID)
+        {
+            upgrades.Add(new PlayerUpgrade(gameObject, upgradeID));
+        }
+
+        public void ActivateUpgrade()
+        {
+            (upgrades[0] as PlayerUpgrade).ActivateUpgrade();
         }
     }
 }

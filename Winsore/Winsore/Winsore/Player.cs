@@ -13,7 +13,7 @@ namespace Winsore
         int START_PLAYER_SPEED = 110;
         GameWorld pgw;
 
-        int playerSpeed;
+        public int playerSpeed;
         protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
         protected bool playerOutsideRoom; // Boolean die false is als de player buiten de room is.
 
@@ -54,7 +54,10 @@ namespace Winsore
             else if (pgw.IsOutsideRoom(position, Width, Height))
                 velocity.X = 0;
 
-
+            if (input.KeyPressed(Keys.U))
+            {
+                pgw.Shop.ActivateUpgrade();
+            }
 
         }            
     }
