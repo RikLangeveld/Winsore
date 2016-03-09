@@ -10,11 +10,14 @@ namespace Winsore
 {
     class Enemy : SpriteGameObject
     {
-        protected int health;
-        protected int movementSpeed;
-        protected float damageToUnits;
-        protected float damageToWall;
-        //TO-DO: Add Aggro Range for units and player
+        protected int health;           //Levenskracht van de enemy.
+        protected int movementSpeed;    //Snelheid waarmee de enemy beweegt
+        protected float damageToUnits;  //De aanvalskracht tegen units.
+        protected float damageToWall;   //De aanvalskracht tegen de muur.
+
+        protected float attackRange;    //De range waarop een enemy kan aanvallen, dus archer e.d. hebben hoge range, melee lage range
+                                        //Stop met lopen door Wall collider - attackingRange
+        protected float aggroRange;     //De range waarop een enemy de speler of zijn units achterna gaat in plaats van te focussen op de muur                                    
 
         public Enemy(string assetname) : base(assetname)
         {
@@ -23,20 +26,26 @@ namespace Winsore
 
         public override void Update(GameTime gameTime)
         {
-            GameWorld cgw = GameWorld as GameWorld;
-
-            if (CollidesWith(cgw.Player))
+            if (CollidesWith(GW.Player))
                 velocity.X = 0;
             else velocity.X = movementSpeed;
 
             //If the enemy has a bad spawn position, reset the enemy.
-            if (cgw.IsOutsideRoomBelow(position, Height) || cgw.IsOutsideRoomAbove(position, Height))
+            if (GW.IsOutsideRoomBelow(position, Height) || GW.IsOutsideRoomAbove(position, Height))
                 Reset();
+
+            //Replace with wall collision instead of room.
+            if (GW.IsOutsideRoomRight(position + AttackRange, Width))
+                velocity.X = 0;
 
             base.Update(gameTime);
 
         }
-
+        
+        /// <summary>
+        /// Debugging only.
+        /// </summary>
+        /// <param name="inputHelper"></param>
         public override void HandleInput(InputHelper inputHelper)
         {
             if (inputHelper.KeyPressed(Keys.Z))
@@ -48,8 +57,9 @@ namespace Winsore
             base.Reset();
 
             Health = 100;
-            CalculateRandomVelocity(25, 100);
+            CalculateRandomVelocity(500, 500);
             CalculateRandomStartingPosition(0, Winsore.Screen.Y);
+            attackRange = 200;
         }
 
         /// <summary>
@@ -85,6 +95,30 @@ namespace Winsore
                 if (health <= 0)
                     visible = false;
             }
+        }
+
+        /// <summary>
+        /// Maakt een Vector2 van de AttackRange zodat die makkelijker toe te passen is.
+        /// </summary>
+        private Vector2 AttackRange
+        {
+            get { return new Vector2(attackRange, attackRange); }
+        }
+
+        /// <summary>
+        /// Maakt een Vector2 van de AggroRange zodat die makkelijker toe te passen is.
+        /// </summary>
+        private Vector2 AggroRange
+        {
+            get { return new Vector2(aggroRange, aggroRange); }
+        }
+
+        /// <summary>
+        /// Returns Something.... because null...
+        /// </summary>
+        private GameWorld GW
+        {
+            get { return GameWorld as GameWorld; }
         }
     }
 }
