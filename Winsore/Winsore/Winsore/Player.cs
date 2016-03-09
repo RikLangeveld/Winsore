@@ -4,9 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Winsore;
 
-namespace GameManagement.gameobjects
+namespace Winsore
 {
     class Player : SpriteGameObject
     {

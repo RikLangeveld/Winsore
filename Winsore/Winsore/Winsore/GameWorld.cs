@@ -1,5 +1,4 @@
-﻿using GameManagement.gameobjects;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +10,19 @@ namespace Winsore
     {
         private SpriteGameObject background;
         private Player player;
+        private Enemy enemy;
 
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
+            enemy = new Enemy("spr_enemy_placeholder");
 
             // Add the grass background to the gameWorld
             this.Add(background);
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
+            this.Add(enemy);
         }
 
         /// <summary>
@@ -94,6 +96,11 @@ namespace Winsore
                 return true;
             else
                 return false;
+        }
+
+        public Player Player
+        {
+            get { return player; }
         }
 
     }

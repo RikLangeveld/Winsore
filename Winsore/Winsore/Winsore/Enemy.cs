@@ -29,7 +29,8 @@ namespace Winsore
                 velocity.X = 0;
             else velocity.X = movementSpeed;
 
-            if (BadSpawnPosition())
+            //If the enemy has a bad spawn position, reset the enemy.
+            if (cgw.IsOutsideRoomBelow(position, Height) || cgw.IsOutsideRoomAbove(position, Height))
                 Reset();
 
             base.Update(gameTime);
@@ -70,11 +71,6 @@ namespace Winsore
         public void CalculateRandomStartingPosition(int minValue, int maxValue)
         {
             position = new Vector2(-65, GameEnvironment.Random.Next(minValue, maxValue));
-        }
-
-        public bool BadSpawnPosition()
-        {
-            return position.Y < 0 || position.Y + Height > Winsore.Screen.Y;
         }
 
         /// <summary>
