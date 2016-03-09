@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,44 @@ namespace Winsore
     class Enemy : SpriteGameObject
     {
         protected int health;
+        protected int movementSpeed;
         protected float damageToUnits;
         protected float damageToWall;
         //TO-DO: Add Aggro Range for units and player
 
         public Enemy(string assetname) : base(assetname)
         {
-            position = new Vector2(0, 600);
-            CalculateRandomVelocity(25, 100);
+            Reset();
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            GameWorld cgw = GameWorld as GameWorld;
+
+            if (CollidesWith(cgw.Player))
+                velocity.X = 0;
+            else velocity.X = movementSpeed;
+
+            if (BadSpawnPosition())
+                Reset();
+
+            base.Update(gameTime);
+
+        }
+
+        public override void HandleInput(InputHelper inputHelper)
+        {
+            if (inputHelper.KeyPressed(Keys.Z))
+                Reset();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+
             Health = 100;
+            CalculateRandomVelocity(25, 100);
+            CalculateRandomStartingPosition(0, Winsore.Screen.Y);
         }
 
         /// <summary>
@@ -28,7 +58,23 @@ namespace Winsore
         /// <param name="maxValue">The maximal velocity of the enemy</param>
         public void CalculateRandomVelocity(int minValue, int maxValue)
         {
-            velocity.X = GameEnvironment.Random.Next(minValue, maxValue);
+            movementSpeed = GameEnvironment.Random.Next(minValue, maxValue);
+        }
+
+        /// <summary>
+        /// Calculates a random starting position for the enemy..
+        /// THIS SHOULD BE MOVED WHEN WE HAVE AN ENEMY SPAWNER CLASS/OBJECT.
+        /// </summary>
+        /// <param name="minValue">The minimal starting Y position of the enemy</param>
+        /// <param name="maxValue">The maximal starting Y position of the enemy</param>
+        public void CalculateRandomStartingPosition(int minValue, int maxValue)
+        {
+            position = new Vector2(-65, GameEnvironment.Random.Next(minValue, maxValue));
+        }
+
+        public bool BadSpawnPosition()
+        {
+            return position.Y < 0 || position.Y + Height > Winsore.Screen.Y;
         }
 
         /// <summary>

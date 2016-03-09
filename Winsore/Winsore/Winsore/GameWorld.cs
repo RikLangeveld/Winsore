@@ -11,16 +11,19 @@ namespace Winsore
     {
         private SpriteGameObject background = null;
         private Player player;
+        private Enemy enemy;
 
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
+            enemy = new Enemy("spr_enemy_placeholder");
 
             // Add the grass background to the gameWorld
             this.Add(background);
 
             this.Add(player);
+            this.Add(enemy);
         }
 
         public bool IsOutsideRoom(Vector2 position, int width, int height)
@@ -31,6 +34,11 @@ namespace Winsore
                 return false;
             else
                 return true;
+        }
+
+        public Player Player
+        {
+            get { return player; }
         }
     }
 }
