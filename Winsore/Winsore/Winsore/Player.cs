@@ -12,7 +12,7 @@ namespace Winsore
         Vector2 START_POSITION = new Vector2(600, 300);
         int START_PLAYER_SPEED = 110;
 
-        int playerSpeed;
+        public int playerSpeed;
         protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
 
         public Player(string assetname) : base(assetname)
@@ -46,6 +46,14 @@ namespace Winsore
             else
                 velocity.X = 0;
 
+<<<<<<< HEAD
+=======
+            if (input.KeyPressed(Keys.U))
+            {
+                pgw.Shop.ActivateUpgrade();
+            }
+
+>>>>>>> origin/master
         }            
     }
 }
