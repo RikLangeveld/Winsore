@@ -11,14 +11,25 @@ namespace Winsore
         private SpriteGameObject background;
         private Player player;
         private Enemy enemy;
+<<<<<<< HEAD
         private Projectile projectile;
+=======
+        private Shop shop;
+>>>>>>> origin/master
 
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
             enemy = new Enemy("spr_enemy_placeholder");
+<<<<<<< HEAD
             projectile = new Projectile("arrow_projectile");
+=======
+            shop = new Shop();
+
+            //add upgrade
+            shop.AddUpgrade(player, "playerSpeed");
+>>>>>>> origin/master
 
             // Add the grass background to the gameWorld
             this.Add(background);
@@ -51,9 +62,9 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomRight(Vector2 position, int width)
+        public bool IsOutsideRoomRight(float positionX, int width)
         {
-            if (position.X + width > Winsore.Screen.X)
+            if (positionX + width > Winsore.Screen.X)
                 return true;
             else
                 return false;
@@ -65,9 +76,9 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomLeft(Vector2 position)
+        public bool IsOutsideRoomLeft(float positionX)
         {
-            if (position.X < 0)
+            if (positionX < 0)
                 return true;
             else
                 return false;            
@@ -79,9 +90,9 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomBelow(Vector2 position, int height)
+        public bool IsOutsideRoomBelow(float positionY, int height)
         {
-            if (position.Y + height > Winsore.Screen.Y)
+            if (positionY + height > Winsore.Screen.Y)
                 return true;
             else
                 return false;
@@ -93,17 +104,23 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomAbove (Vector2 position, int height)
+        public bool IsOutsideRoomAbove (float positionY, int height)
         {
-            if (position.Y <0 )
+            if (positionY <0 )
                 return true;
             else
                 return false;
         }
+        
 
         public Player Player
         {
             get { return player; }
+        }
+
+        public Shop Shop
+        {
+            get { return shop; }
         }
 
     }

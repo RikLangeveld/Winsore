@@ -10,3 +10,9 @@ C:\Users\Kay\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagemen
 C:\Users\Kay\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Kay\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
 C:\Users\Kay\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb
+C:\Users\rik\Desktop\Winsore\GameManagement\bin\x86\Debug\GameManagement.dll
+C:\Users\rik\Desktop\Winsore\GameManagement\bin\x86\Debug\GameManagement.pdb
+C:\Users\rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.csprojResolveAssemblyReference.cache
+C:\Users\rik\Desktop\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
+C:\Users\rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb

@@ -78,6 +78,9 @@
     <Compile Include="gameobjects\TextGameObject.cs" />
     <Compile Include="SpriteSheet.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagramGameManagement.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

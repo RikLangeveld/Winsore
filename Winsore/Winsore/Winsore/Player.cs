@@ -11,25 +11,18 @@ namespace Winsore
     {
         Vector2 START_POSITION = new Vector2(600, 300);
         int START_PLAYER_SPEED = 110;
-        GameWorld pgw;
 
-        int playerSpeed;
+        public int playerSpeed;
         protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
-        protected bool playerOutsideRoom; // Boolean die false is als de player buiten de room is.
 
         public Player(string assetname) : base(assetname)
             {
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
-            pgw = GameWorld as GameWorld;
         }
 
         public override void Update(GameTime gameTime)
         {
-            //pgw = GameWorld as GameWorld;
-
-            if (!playerOutsideRoom)
-                lastPositionInsideRoom = position;
 
             base.Update(gameTime);
         }
@@ -39,23 +32,28 @@ namespace Winsore
         {
             GameWorld pgw = GameWorld as GameWorld;
 
-            if (input.IsKeyDown(Keys.W) && !playerOutsideRoom)
+            if (pgw.IsOutsideRoomAbove(position.Y, Height))
+                position = new Vector2(position.X, 0);
+            else if (input.IsKeyDown(Keys.W))
                 velocity.Y = -playerSpeed;
-            else if (input.IsKeyDown(Keys.S) && !playerOutsideRoom)
-                velocity.Y = playerSpeed;
-            else if (pgw.IsOutsideRoom(position,Width,Height))
+            else
                 velocity.Y = 0;
 
-
-            if (input.IsKeyDown(Keys.A) && !playerOutsideRoom)
+            if (pgw.IsOutsideRoomLeft(position.X))
+                position = new Vector2(0, Position.Y);
+            else if (input.IsKeyDown(Keys.A))
                 velocity.X = -playerSpeed;
-            else if (input.IsKeyDown(Keys.D) && !playerOutsideRoom)
-                velocity.X = playerSpeed;
-            else if (pgw.IsOutsideRoom(position, Width, Height))
+            else
                 velocity.X = 0;
 
+<<<<<<< HEAD
+=======
+            if (input.KeyPressed(Keys.U))
+            {
+                pgw.Shop.ActivateUpgrade();
+            }
 
-
+>>>>>>> origin/master
         }            
     }
 }
