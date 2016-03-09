@@ -1,2 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Animation" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAIAAAAAQAAAAEACAAgAAAIAAAACA=</HashCode>
+      <FileName>animation\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AssetManager" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAAAAAAAAAkAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>AssetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collision" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawingHelper" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawingHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnvironment" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BJQAAECQAAAAAgAABIAAIASAAAAAJAgAAAQAAAAAAAQ=</HashCode>
+      <FileName>GameEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimatedGameObject" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAACAAAAAAAAgEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gameobjects\AnimatedGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAACAhiBgAAABYAAAACAAAAAMAAQADAAEAgA=</HashCode>
+      <FileName>gameobjects\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjectGrid" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAACAAAIABkBAAAAAIAAAACAAAAEAAAAAwAgAAEA=</HashCode>
+      <FileName>gameobjects\GameObjectGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectList" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAACAAAAABgAAAAAABAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>gameobjects\GameObjectList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteGameObject" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAABAAAAgAAAAAABEAAgDAAAAAQAAAAAAgIAAA=</HashCode>
+      <FileName>gameobjects\SpriteGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextGameObject" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggAAACAAAAAAAAAAAACIAAAAiAAAAAA=</HashCode>
+      <FileName>gameobjects\TextGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSettingsManager" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameSettingsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStateManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAQAAABgAAAAQAAAIUAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>GameStateManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InputHelper" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAgAAAAAAAAAAIAAUBCAAAAAAAAAAAAQABSAAA=</HashCode>
+      <FileName>InputHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteSheet" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAgAAAACAAEAAgBAABAAQAASAAAAIAEE=</HashCode>
+      <FileName>SpriteSheet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IGameLoopObject" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGameLoopObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
