@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb</Output>
-      <Time>2016-03-08T08:29:44.0900532+01:00</Time>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb</Output>
+      <Time>2016-03-04T15:35:15.504541+01:00</Time>
     </Item>
     <Item>
       <Source>spr_hero_placeholder.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb</Output>
-      <Time>2016-03-08T08:29:44.1030497+01:00</Time>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb</Output>
+      <Time>2016-03-04T16:53:05.3206048+01:00</Time>
     </Item>
     <Item>
       <Source>spr_enemy_placeholder.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_placeholder.xnb</Output>
-      <Time>2016-03-08T08:46:41.5331717+01:00</Time>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_placeholder.xnb</Output>
+      <Time>2016-03-08T11:12:21.1143337+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -35,10 +35,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\WinsoreContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\WinsoreContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -67,7 +67,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-02-03T10:41:33.8242484+01:00</Value>
+        <Value>2016-02-08T15:10:54.9994069+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

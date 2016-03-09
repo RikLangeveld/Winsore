@@ -30,7 +30,7 @@ namespace Winsore
             else velocity.X = movementSpeed;
 
             //If the enemy has a bad spawn position, reset the enemy.
-            if (cgw.IsOutsideRoomBelow(position, Height) || cgw.IsOutsideRoomAbove(position, Height))
+            if (cgw.IsOutsideRoomBelow(position.Y, Height) || cgw.IsOutsideRoomAbove(position.Y, Height))
                 Reset();
 
             base.Update(gameTime);

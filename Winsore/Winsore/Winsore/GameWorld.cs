@@ -55,7 +55,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomRight(float positionX, int width)
         {
-            if (positionX + width > Winsore.Screen.X)
+            if (positionX + width > 1920)
                 return true;
             else
                 return false;
@@ -83,7 +83,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomBelow(float positionY, int height)
         {
-            if (positionY + height > Winsore.Screen.Y)
+            if (positionY + height > 1080)
                 return true;
             else
                 return false;
