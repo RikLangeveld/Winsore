@@ -12,24 +12,22 @@ namespace GameManagement.gameobjects
     {
         Vector2 START_POSITION = new Vector2(600, 300);
         int START_PLAYER_SPEED = 110;
+        GameWorld pgw;
 
         int playerSpeed;
-        protected Vector2 lastPositionInsideRoom;
-
-        protected bool playerOutsideRoom;
+        protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
+        protected bool playerOutsideRoom; // Boolean die false is als de player buiten de room is.
 
         public Player(string assetname) : base(assetname)
             {
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
-
+            pgw = GameWorld as GameWorld;
         }
 
         public override void Update(GameTime gameTime)
         {
-            // Hoe kom ik in de gameWorld?
-            GameWorld pgw = GameWorld as GameWorld;
-            playerOutsideRoom = pgw.IsOutsideRoom(this.position, Width, Height);
+            //pgw = GameWorld as GameWorld;
 
             if (!playerOutsideRoom)
                 lastPositionInsideRoom = position;
@@ -40,12 +38,13 @@ namespace GameManagement.gameobjects
         // HandleInput functie voor de beweging van de Player. 
           public override void HandleInput(InputHelper input)
         {
+            GameWorld pgw = GameWorld as GameWorld;
 
             if (input.IsKeyDown(Keys.W) && !playerOutsideRoom)
                 velocity.Y = -playerSpeed;
             else if (input.IsKeyDown(Keys.S) && !playerOutsideRoom)
                 velocity.Y = playerSpeed;
-            else
+            else if (pgw.IsOutsideRoom(position,Width,Height))
                 velocity.Y = 0;
 
 
@@ -53,10 +52,9 @@ namespace GameManagement.gameobjects
                 velocity.X = -playerSpeed;
             else if (input.IsKeyDown(Keys.D) && !playerOutsideRoom)
                 velocity.X = playerSpeed;
-            else velocity.X = 0;
+            else if (pgw.IsOutsideRoom(position, Width, Height))
+                velocity.X = 0;
 
-            if (playerOutsideRoom)
-                position = lastPositionInsideRoom;
 
 
         }            
