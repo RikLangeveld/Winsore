@@ -23,7 +23,7 @@ namespace Winsore
             Content.RootDirectory = "Content";
 
             // Zet het beeld naar fullscreen. 
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
 
             // zet de buffer hoogte naar 1080 en breedte naar 1920
            
@@ -45,7 +45,6 @@ namespace Winsore
             // sets the gamestate to playing
             gameStateManager.SwitchTo("playingState");
 
-            screen = new Point(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
         }
     }
 }
