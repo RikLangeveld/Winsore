@@ -37,17 +37,17 @@ namespace Winsore
             MoveTowardsObject(GW.Player, AggroRange, gameTime);
 
             //If the enemy has a bad spawn position, reset the enemy.
-            if (GW.IsOutsideRoomBelow(position, Height) || GW.IsOutsideRoomAbove(position, Height))
+            if (GW.IsOutsideRoomBelow(position.Y, Height) || GW.IsOutsideRoomAbove(position.Y, Height))
                 Reset();
 
             //Replace with wall collision instead of room.
-            if (GW.IsOutsideRoomRight(position + AttackRange, Width))
+            if (GW.IsOutsideRoomRight(position.X + AttackRange.X, Width))
                 velocity.X = 0;
 
             base.Update(gameTime);
 
         }
-        
+
         /// <summary>
         /// Debugging only.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Winsore
         {
             position = new Vector2(-65, GameEnvironment.Random.Next(minValue, maxValue));
         }
-        
+
         /// <summary>
         /// Move towards an object once the distance to the target is inside the aggro range.
         /// </summary>

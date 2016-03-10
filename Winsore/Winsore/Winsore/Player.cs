@@ -11,25 +11,18 @@ namespace Winsore
     {
         Vector2 START_POSITION = new Vector2(600, 300);
         int START_PLAYER_SPEED = 110;
-        GameWorld pgw;
 
-        int playerSpeed;
+        public int playerSpeed;
         protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
-        protected bool playerOutsideRoom; // Boolean die false is als de player buiten de room is.
 
         public Player(string assetname) : base(assetname)
             {
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
-            pgw = GameWorld as GameWorld;
         }
 
         public override void Update(GameTime gameTime)
         {
-            //pgw = GameWorld as GameWorld;
-
-            if (!playerOutsideRoom)
-                lastPositionInsideRoom = position;
 
             base.Update(gameTime);
         }
@@ -39,22 +32,32 @@ namespace Winsore
         {
             GameWorld pgw = GameWorld as GameWorld;
 
-            if (input.IsKeyDown(Keys.W) && !playerOutsideRoom)
+            if (pgw.IsOutsideRoomAbove(position.Y, Height))
+                position = new Vector2(position.X, 5);
+            else if (input.IsKeyDown(Keys.W))
                 velocity.Y = -playerSpeed;
-            else if (input.IsKeyDown(Keys.S) && !playerOutsideRoom)
+            else if (pgw.IsOutsideRoomBelow(position.Y, Height))
+                position = new Vector2(position.X, 1075 - Height);
+            else if (input.IsKeyDown(Keys.S))
                 velocity.Y = playerSpeed;
-            else if (pgw.IsOutsideRoom(position,Width,Height))
+            else
                 velocity.Y = 0;
 
-
-            if (input.IsKeyDown(Keys.A) && !playerOutsideRoom)
+            if (pgw.IsOutsideRoomLeft(position.X))
+                position = new Vector2(5, Position.Y);
+            else if (input.IsKeyDown(Keys.A))
                 velocity.X = -playerSpeed;
-            else if (input.IsKeyDown(Keys.D) && !playerOutsideRoom)
+            else if (pgw.IsOutsideRoomRight(position.X, Width))
+                position = new Vector2(1915-Width, Position.Y);
+            else if (input.IsKeyDown(Keys.D))
                 velocity.X = playerSpeed;
-            else if (pgw.IsOutsideRoom(position, Width, Height))
+            else
                 velocity.X = 0;
 
-
+            if (input.KeyPressed(Keys.U))
+            {
+                pgw.Shop.ActivateUpgrade();
+            }
 
         }            
     }
