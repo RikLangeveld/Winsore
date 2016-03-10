@@ -96,7 +96,7 @@ namespace Winsore
                 velocity.X = -playerSpeed;
             else if (movingRight)
                 velocity.X = playerSpeed;
-            else if (!movingUp && !movingDown)
+            else if (!movingRight && !movingLeft)
                 velocity.X = 0;
 
 
