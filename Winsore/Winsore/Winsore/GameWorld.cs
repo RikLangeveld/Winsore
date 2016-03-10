@@ -11,7 +11,9 @@ namespace Winsore
         private SpriteGameObject background;
         private Player player;
         private Enemy enemy;
+        private Projectile projectile;
         private Shop shop;
+
 
         protected Vector2 SCREEN_SIZE = new Vector2(1920, 1080);
 
@@ -20,16 +22,20 @@ namespace Winsore
             background = new SpriteGameObject("grass");
             player = new Player("spr_hero_placeholder");
             enemy = new Enemy("spr_enemy_placeholder");
+            projectile = new Projectile("arrow_projectile");
+
             shop = new Shop();
 
             //add upgrade
             shop.AddUpgrade(player, "playerSpeed");
+
 
             // Add the grass background to the gameWorld
             this.Add(background);
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);
+            this.Add(projectile);
         }
 
         /// <summary>
