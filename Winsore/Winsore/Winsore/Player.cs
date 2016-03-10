@@ -9,11 +9,15 @@ namespace Winsore
 {
     class Player : SpriteGameObject
     {
-        Vector2 START_POSITION = new Vector2(600, 300);
-        int START_PLAYER_SPEED = 110;
+        protected Vector2 START_POSITION = new Vector2(600, 300);
+        protected const int START_PLAYER_SPEED = 200;
+
+        private bool movingRight = false;
+        private bool movingLeft = false;
+        private bool movingUp = false;
+        private bool movingDown = false;
 
         public int playerSpeed;
-        protected Vector2 lastPositionInsideRoom; // This is used to prefent the player from leaving the view
 
         public Player(string assetname) : base(assetname)
             {
@@ -32,27 +36,69 @@ namespace Winsore
         {
             GameWorld pgw = GameWorld as GameWorld;
 
+            // Check if is in the room before moving up.
             if (pgw.IsOutsideRoomAbove(position.Y, Height))
-                position = new Vector2(position.X, 5);
+            {
+                position = new Vector2(position.X, 0);
+                movingUp = false;
+            }
             else if (input.IsKeyDown(Keys.W))
-                velocity.Y = -playerSpeed;
-            else if (pgw.IsOutsideRoomBelow(position.Y, Height))
-                position = new Vector2(position.X, 1075 - Height);
-            else if (input.IsKeyDown(Keys.S))
-                velocity.Y = playerSpeed;
+                movingUp = true;
             else
+                movingUp = false;
+
+            // check if in the room before moving down
+            if (pgw.IsOutsideRoomBelow(position.Y, Height))
+            {
+                position = new Vector2(position.X, pgw.ScreenSize.Y - Height);
+                movingDown = false;
+            }
+            else if (input.IsKeyDown(Keys.S))
+                movingDown = true;
+            else
+                movingDown = false;
+
+            // check if in teh room before moving left
+            if (pgw.IsOutsideRoomLeft(position.X))
+            {
+                position = new Vector2(0, Position.Y);
+                movingDown = false;
+            }
+            else if (input.IsKeyDown(Keys.A))
+                movingLeft = true;
+            else
+                movingLeft = false;
+
+            // check if in the room before moving right
+            if (pgw.IsOutsideRoomRight(position.X, Width))
+            {
+                position = new Vector2(pgw.ScreenSize.X - Height, Position.Y);
+                movingRight = false;
+            }
+            else if (input.IsKeyDown(Keys.D))
+                movingRight = true;
+            else
+                movingRight = false;
+
+            // adjust the veloctiy on the directions you are moving.
+            if (movingUp && movingDown)
+                velocity.Y = 0;
+            else if (movingDown)
+                velocity.Y = playerSpeed;
+            else if (movingUp)
+                velocity.Y = -playerSpeed;
+            else if (!movingUp && !movingDown)
                 velocity.Y = 0;
 
-            if (pgw.IsOutsideRoomLeft(position.X))
-                position = new Vector2(5, Position.Y);
-            else if (input.IsKeyDown(Keys.A))
-                velocity.X = -playerSpeed;
-            else if (pgw.IsOutsideRoomRight(position.X, Width))
-                position = new Vector2(1915-Width, Position.Y);
-            else if (input.IsKeyDown(Keys.D))
-                velocity.X = playerSpeed;
-            else
+            if (movingLeft && movingRight)
                 velocity.X = 0;
+            else if (movingLeft)
+                velocity.X = -playerSpeed;
+            else if (movingRight)
+                velocity.X = playerSpeed;
+            else if (!movingRight && !movingLeft)
+                velocity.X = 0;
+
 
             if (input.KeyPressed(Keys.U))
             {
