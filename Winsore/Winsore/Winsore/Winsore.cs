@@ -16,9 +16,9 @@ namespace Winsore
     /// </summary>
     public class Winsore : GameEnvironment
     {
-        protected Vector2 screenSize;
-
+        protected Vector2 SCREEN_SIZE = new Vector2(1920,1080);
         public Winsore()
+
         {
             Content.RootDirectory = "Content";
 
@@ -26,8 +26,8 @@ namespace Winsore
             graphics.IsFullScreen = false;
 
             // zet de buffer hoogte naar 1080 en breedte naar 1920
-            graphics.PreferredBackBufferWidth = 1920;
-            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferWidth = (int)SCREEN_SIZE.X;
+            graphics.PreferredBackBufferHeight = (int)SCREEN_SIZE.Y;
         }
 
         /// <summary>

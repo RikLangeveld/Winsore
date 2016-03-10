@@ -13,6 +13,8 @@ namespace Winsore
         private Enemy enemy;
         private Shop shop;
 
+        protected Vector2 SCREEN_SIZE = new Vector2(1920, 1080);
+
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
@@ -102,6 +104,12 @@ namespace Winsore
             else
                 return false;
         }
+
+        public Vector2 ScreenSize
+        {
+            get { return SCREEN_SIZE; }
+        }
+
         
 
         public Player Player
