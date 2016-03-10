@@ -12,6 +12,9 @@ namespace Winsore
     {
         protected int health;           //Levenskracht van de enemy.
         protected int movementSpeed;    //Snelheid waarmee de enemy beweegt
+        protected int dropAmount;    //Het aantal geld dat de enemy dropt. (Random?)
+
+        protected float attackSpeed;    //De snelheid waarmee de enemy aanvalt.
         protected float damageToUnits;  //De aanvalskracht tegen units.
         protected float damageToWall;   //De aanvalskracht tegen de muur.
 
@@ -27,8 +30,11 @@ namespace Winsore
         public override void Update(GameTime gameTime)
         {
             if (CollidesWith(GW.Player))
-                velocity.X = 0;
-            else velocity.X = movementSpeed;
+                velocity = Vector2.Zero;
+
+            velocity = new Vector2(movementSpeed, 0);
+
+            MoveTowardsObject(GW.Player, AggroRange, gameTime);
 
             //If the enemy has a bad spawn position, reset the enemy.
             if (GW.IsOutsideRoomBelow(position, Height) || GW.IsOutsideRoomAbove(position, Height))
@@ -57,9 +63,10 @@ namespace Winsore
             base.Reset();
 
             Health = 100;
-            CalculateRandomVelocity(500, 500);
+            CalculateRandomVelocity(15, 35);
             CalculateRandomStartingPosition(0, Winsore.Screen.Y);
             attackRange = 200;
+            aggroRange = 250;
         }
 
         /// <summary>
@@ -81,6 +88,30 @@ namespace Winsore
         public void CalculateRandomStartingPosition(int minValue, int maxValue)
         {
             position = new Vector2(-65, GameEnvironment.Random.Next(minValue, maxValue));
+        }
+        
+        /// <summary>
+        /// Move towards an object once the distance to the target is inside the aggro range.
+        /// </summary>
+        /// <param name="target">The object which the enemy should move to</param>
+        /// <param name="range">The range between the enemy and the other object before it should move towards it</param>
+        /// <param name="gameTime"></param>
+        public void MoveTowardsObject(SpriteGameObject target, Vector2 range, GameTime gameTime)
+        {
+            Vector2 distanceToTarget = position - target.Position;
+
+            if (Math.Abs(distanceToTarget.X) < range.X & Math.Abs(distanceToTarget.Y) < range.Y)
+            {
+                distanceToTarget.Normalize();
+
+                if (CollidesWith(target))
+                    velocity = Vector2.Zero;
+                else
+                    velocity = new Vector2(movementSpeed / (float)gameTime.ElapsedGameTime.TotalMilliseconds,
+                        movementSpeed / (float)gameTime.ElapsedGameTime.TotalMilliseconds);
+
+                position -= distanceToTarget * velocity;
+            }
         }
 
         /// <summary>
