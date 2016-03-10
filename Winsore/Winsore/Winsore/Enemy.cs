@@ -12,7 +12,7 @@ namespace Winsore
     {
         protected int health;           //Levenskracht van de enemy.
         protected int movementSpeed;    //Snelheid waarmee de enemy beweegt
-        protected int dropAmount;    //Het aantal geld dat de enemy dropt. (Random?)
+        protected int dropAmount;       //Het aantal geld dat de enemy dropt. (Random?)
 
         protected float attackSpeed;    //De snelheid waarmee de enemy aanvalt.
         protected float damageToUnits;  //De aanvalskracht tegen units.
@@ -34,7 +34,7 @@ namespace Winsore
 
             velocity = new Vector2(movementSpeed, 0);
 
-            MoveTowardsObject(GW.Player, AggroRange, gameTime);
+            MoveTowardsUnit(GW.Player, AggroRange, AttackRange, gameTime);
 
             //If the enemy has a bad spawn position, reset the enemy.
             if (GW.IsOutsideRoomBelow(position.Y, Height) || GW.IsOutsideRoomAbove(position.Y, Height))
@@ -44,14 +44,16 @@ namespace Winsore
             if (GW.IsOutsideRoomRight(position.X + AttackRange.X, Width))
                 velocity.X = 0;
 
+            if (Health <= 0)
+            {
+                DropMoney(1, 2);
+                Reset();            //DELETE ENEMY OBJECT INSTEAD
+            }
+
             base.Update(gameTime);
 
         }
-
-        /// <summary>
-        /// Debugging only.
-        /// </summary>
-        /// <param name="inputHelper"></param>
+        
         public override void HandleInput(InputHelper inputHelper)
         {
             if (inputHelper.KeyPressed(Keys.Z))
@@ -63,9 +65,9 @@ namespace Winsore
             base.Reset();
 
             Health = 100;
-            CalculateRandomVelocity(15, 35);
+            CalculateRandomVelocity(5, 25);
             CalculateRandomStartingPosition(0, Winsore.Screen.Y);
-            attackRange = 200;
+            attackRange = 150;
             aggroRange = 250;
         }
 
@@ -76,7 +78,7 @@ namespace Winsore
         /// <param name="maxValue">The maximal velocity of the enemy</param>
         public void CalculateRandomVelocity(int minValue, int maxValue)
         {
-            movementSpeed = GameEnvironment.Random.Next(minValue, maxValue);
+            movementSpeed = GameEnvironment.Random.Next(minValue, maxValue) ;
         }
 
         /// <summary>
@@ -96,22 +98,36 @@ namespace Winsore
         /// <param name="target">The object which the enemy should move to</param>
         /// <param name="range">The range between the enemy and the other object before it should move towards it</param>
         /// <param name="gameTime"></param>
-        public void MoveTowardsObject(SpriteGameObject target, Vector2 range, GameTime gameTime)
+        public void MoveTowardsUnit(SpriteGameObject target, Vector2 range, Vector2 attackRange, GameTime gameTime)
         {
             Vector2 distanceToTarget = position - target.Position;
+            //GET ATTACK RANGE AND USE IT
+            Vector2 attackOffset = target.Position - position;
 
-            if (Math.Abs(distanceToTarget.X) < range.X & Math.Abs(distanceToTarget.Y) < range.Y)
+            if (Math.Abs(distanceToTarget.X) < range.X && Math.Abs(distanceToTarget.Y) < range.Y)
             {
                 distanceToTarget.Normalize();
 
-                if (CollidesWith(target))
+                if (Math.Abs(attackOffset.X) <= attackRange.X && Math.Abs(attackOffset.Y) <= attackRange.Y)
                     velocity = Vector2.Zero;
                 else
-                    velocity = new Vector2(movementSpeed / (float)gameTime.ElapsedGameTime.TotalMilliseconds,
-                        movementSpeed / (float)gameTime.ElapsedGameTime.TotalMilliseconds);
+                    velocity = new Vector2(movementSpeed / 2 / (float)gameTime.ElapsedGameTime.TotalMilliseconds,
+                        movementSpeed / 2 / (float)gameTime.ElapsedGameTime.TotalMilliseconds);
 
                 position -= distanceToTarget * velocity;
             }
+        }
+
+        /// <summary>
+        /// Used to randomize drop amount to make the game a little bit more fun.
+        /// </summary>
+        /// <param name="minAmount">The minimal drop amount / 100. If you want to drop at least 200, set it to 2.</param>
+        /// <param name="maxAmount">The maximal drop amount / 100. If you want to drop max 500, set it to 5.</param>
+        /// <returns></returns>
+        public void DropMoney(int minAmount, int maxAmount)
+        {
+            dropAmount = GameEnvironment.Random.Next(minAmount, maxAmount) * 100;
+            GW.Player.Money += dropAmount;
         }
 
         /// <summary>
@@ -124,8 +140,20 @@ namespace Winsore
             {
                 health = value;
                 if (health <= 0)
+                {
                     visible = false;
+                }
             }
+        }
+
+        public int DamageToUnits
+        {
+            get { return (int)damageToUnits; }
+        }
+
+        public int DamageToWall
+        {
+            get { return (int)damageToWall; }
         }
 
         /// <summary>

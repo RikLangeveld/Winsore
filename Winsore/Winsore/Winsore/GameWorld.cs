@@ -127,6 +127,5 @@ namespace Winsore
         {
             get { return shop; }
         }
-
     }
 }

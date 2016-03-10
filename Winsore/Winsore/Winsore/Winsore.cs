@@ -17,8 +17,8 @@ namespace Winsore
     public class Winsore : GameEnvironment
     {
         protected Vector2 SCREEN_SIZE = new Vector2(1920,1080);
-        public Winsore()
 
+        public Winsore()
         {
             Content.RootDirectory = "Content";
 

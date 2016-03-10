@@ -19,10 +19,13 @@ namespace Winsore
 
         public int playerSpeed;
 
+        protected int money;
+
         public Player(string assetname) : base(assetname)
-            {
+        {
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
+            Money = 0;
         }
 
         public override void Update(GameTime gameTime)
@@ -105,6 +108,12 @@ namespace Winsore
                 pgw.Shop.ActivateUpgrade();
             }
 
-        }            
+        }   
+        
+        public int Money
+        {
+            get { return money; }
+            set { money = value; }
+        }         
     }
 }
