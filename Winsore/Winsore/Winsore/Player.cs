@@ -21,7 +21,7 @@ namespace Winsore
 
         protected int money;
 
-        public Player(string assetname) : base(assetname)
+        public Player(string assetname) : base(assetname , 1, "")
         {
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
@@ -87,18 +87,32 @@ namespace Winsore
             if (movingUp && movingDown)
                 velocity.Y = 0;
             else if (movingDown)
+            {
                 velocity.Y = playerSpeed;
+                sprite.SheetIndex = 0;
+            }
             else if (movingUp)
+            {
                 velocity.Y = -playerSpeed;
+                sprite.SheetIndex = 2;
+            }
             else if (!movingUp && !movingDown)
                 velocity.Y = 0;
-
             if (movingLeft && movingRight)
                 velocity.X = 0;
+
             else if (movingLeft)
+            {
                 velocity.X = -playerSpeed;
+                Sprite.SheetIndex = 1;
+                Mirror = true;
+            }
             else if (movingRight)
+            {
                 velocity.X = playerSpeed;
+                Sprite.SheetIndex = 1;
+                Mirror = false;
+            }
             else if (!movingRight && !movingLeft)
                 velocity.X = 0;
 
