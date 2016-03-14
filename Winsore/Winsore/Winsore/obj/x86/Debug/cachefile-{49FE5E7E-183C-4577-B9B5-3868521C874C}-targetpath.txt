@@ -2,5 +2,4 @@ Content\Grass.xnb
 Content\spr_hero_placeholder.xnb
 Content\spr_enemy_placeholder.xnb
 Content\arrow_projectile.xnb
-Content\spr_maxim.xnb
 Content\Sprite_maxim@1x3.xnb

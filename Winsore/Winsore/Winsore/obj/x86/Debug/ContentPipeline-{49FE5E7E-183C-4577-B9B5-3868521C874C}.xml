@@ -38,22 +38,13 @@
       <Time>2016-03-13T19:49:27.1016114+01:00</Time>
     </Item>
     <Item>
-      <Source>spr_maxim.png</Source>
-      <Name>spr_maxim</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_maxim.xnb</Output>
-      <Time>2016-03-14T15:26:14.5589494+01:00</Time>
-    </Item>
-    <Item>
       <Source>Sprite_maxim@1x3.png</Source>
       <Name>Sprite_maxim@1x3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Sprite_maxim@1x3.xnb</Output>
-      <Time>2016-03-14T19:10:09.0614162+01:00</Time>
+      <Time>2016-03-14T20:09:05.8957116+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
