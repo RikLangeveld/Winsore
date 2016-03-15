@@ -43,7 +43,7 @@ namespace Winsore
             //Replace with wall collision instead of room.
             if (GW.IsOutsideRoomRight(position.X + AttackRange.X, Width))
                 velocity.X = 0;
-
+            
             if (Health <= 0)
             {
                 DropMoney(1, 2);
@@ -93,15 +93,16 @@ namespace Winsore
         }
 
         /// <summary>
-        /// Move towards an object once the distance to the target is inside the aggro range.
+        /// Move towards the target object when the target is within the aggro range
+        /// Stop moving when the target object is within the attacking range
         /// </summary>
-        /// <param name="target">The object which the enemy should move to</param>
-        /// <param name="range">The range between the enemy and the other object before it should move towards it</param>
-        /// <param name="gameTime"></param>
+        /// <param name="target">The target object</param>
+        /// <param name="range">The aggro range of the enemy</param>
+        /// <param name="attackRange">The attacking range of the enemy</param>
+        /// <param name="gameTime">Standard GameTime</param>
         public void MoveTowardsUnit(SpriteGameObject target, Vector2 range, Vector2 attackRange, GameTime gameTime)
         {
             Vector2 distanceToTarget = position - target.Position;
-            //GET ATTACK RANGE AND USE IT
             Vector2 attackOffset = target.Position - position;
 
             if (Math.Abs(distanceToTarget.X) < range.X && Math.Abs(distanceToTarget.Y) < range.Y)
