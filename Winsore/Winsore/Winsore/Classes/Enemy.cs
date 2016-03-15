@@ -65,7 +65,7 @@ namespace Winsore
             base.Reset();
 
             Health = 100;
-            CalculateRandomVelocity(5, 25);
+            CalculateRandomVelocity(25, 50);
             CalculateRandomStartingPosition(0, Winsore.Screen.Y);
             attackRange = 150;
             aggroRange = 250;
