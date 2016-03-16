@@ -51,3 +51,6 @@ C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Cont
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_idle@1x1.xnb
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_walking@2x1.xnb
+C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\debugmenu.xnb
+C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFont.xnb
+C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFontSmall.xnb
