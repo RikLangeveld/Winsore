@@ -17,7 +17,6 @@ C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.cspro
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.exe
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.pdb
-C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.csprojResolveAssemblyReference.cache
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\Winsore.exe
@@ -45,3 +44,4 @@ C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_p
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_down@2x1.xnb
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_side@2x1.xnb
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_up@2x1.xnb
+C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb

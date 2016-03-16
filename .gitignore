@@ -65,3 +65,4 @@ Winsore/Winsore/Winsore/obj/x86/Debug/Winsore.pdb
 Winsore/Winsore/WinsoreContent/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Winsore/Winsore/WinsoreContent/obj/x86/Debug/WinsoreContent.contentprojResolveAssemblyReference.cache
 Winsore/Winsore/Winsore/bin/x86/Debug/Content/spr_enemy_placeholder.xnb
+*.suo

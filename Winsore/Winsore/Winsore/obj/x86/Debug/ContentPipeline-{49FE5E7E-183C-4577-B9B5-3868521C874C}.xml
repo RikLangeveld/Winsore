@@ -11,22 +11,13 @@
       <Time>2016-03-04T15:35:15.504541+01:00</Time>
     </Item>
     <Item>
-      <Source>spr_hero_placeholder.png</Source>
-      <Name>spr_hero_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_hero_placeholder.xnb</Output>
-      <Time>2016-03-04T16:53:05.3206048+01:00</Time>
-    </Item>
-    <Item>
       <Source>spr_enemy_placeholder.png</Source>
       <Name>spr_enemy_placeholder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_placeholder.xnb</Output>
-      <Time>2016-03-08T11:12:21.1143337+01:00</Time>
+      <Time>2016-03-16T12:18:36.4434838+01:00</Time>
     </Item>
     <Item>
       <Source>arrow_projectile.PNG</Source>
@@ -44,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_down@1x1.xnb</Output>
-      <Time>2016-03-15T10:24:31.9271968+01:00</Time>
+      <Time>2016-03-16T12:18:37.4946888+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_down@2x1.PNG</Source>
@@ -53,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_down@2x1.xnb</Output>
-      <Time>2016-03-15T10:24:31.9302094+01:00</Time>
+      <Time>2016-03-16T12:18:37.4956893+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_side@2x1.PNG</Source>
@@ -62,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_side@2x1.xnb</Output>
-      <Time>2016-03-15T10:24:31.9332015+01:00</Time>
+      <Time>2016-03-16T12:18:37.4956893+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_up@2x1.PNG</Source>
@@ -71,7 +62,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_up@2x1.xnb</Output>
-      <Time>2016-03-15T10:24:31.9242052+01:00</Time>
+      <Time>2016-03-16T12:18:37.4956893+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Spr_castle.png</Source>
+      <Name>Spr_castle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb</Output>
+      <Time>2016-03-16T13:08:39.7455454+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
