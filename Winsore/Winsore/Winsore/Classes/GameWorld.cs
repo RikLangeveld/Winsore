@@ -29,12 +29,12 @@ namespace Winsore
 
             CastleSpriteTest = new SpriteGameObject("spr_castle");
 
-            shop = new Shop();
+            shop = new Shop("winkelwagen");
 
             debugOverlay = new DebugOverlay();
 
             //add upgrade
-            shop.AddUpgrade(player, "playerSpeed");
+            shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
 
            
 
@@ -42,6 +42,10 @@ namespace Winsore
             // Add the grass background to the gameWorld
             this.Add(background);
             this.Add(CastleSpriteTest);
+
+            // Add shop to the GameObjectList of gameworld
+            this.Add(shop);
+
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);

@@ -23,7 +23,7 @@ namespace Winsore
             Content.RootDirectory = "Content";
 
             // Zet het beeld naar fullscreen. 
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
 
             // zet de buffer hoogte naar 1080 en breedte naar 1920
             graphics.PreferredBackBufferWidth = (int)SCREEN_SIZE.X;
