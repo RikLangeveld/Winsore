@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,34 @@ using System.Text;
 namespace Winsore
 {
 
-    enum upgradeTypes
+    enum UpgradeTypes
     {
         PlayerSpeed
     }
 
-    class Shop
+    class Shop : GameObjectList
     {
 
-        List<Upgrade> upgrades;
+        SpriteGameObject shopSprite;
+        TextGameObject shopText;
 
-        public Shop()
+        Dictionary<UpgradeTypes, Upgrade> upgrades;
+
+        public Shop(string assetname) : base()
         {
-            upgrades = new List<Upgrade>();
+            // initializ variables
+            shopSprite = new SpriteGameObject(assetname);
+            shopText = new TextGameObject("shopFont");
+            upgrades = new Dictionary<UpgradeTypes, Upgrade>();
 
+            // set position
+            shopSprite.Position = new Vector2(1700, 100);
+            shopText.Text = "";
+            shopText.Position = new Vector2(300, 300);
+
+            // add to GameObjectList
+            Add(shopSprite);
+            Add(shopText);
             
         }
 
@@ -29,18 +44,29 @@ namespace Winsore
         /// <param name="gameObject">Type of object where the upgrade belongs to</param>
         /// <param name="upgradeID">identifier for the upgrade</param>
         /// <returns></returns>
-        public void AddUpgrade(SpriteGameObject gameObject, string upgradeID)
+        public void AddUpgrade(SpriteGameObject gameObject, UpgradeTypes upgradeID)
         {
-            upgrades.Add(new PlayerUpgrade(gameObject, upgradeID));
+            upgrades.Add(upgradeID, new PlayerUpgrade(gameObject, upgradeID));
         }
 
         /// <summary>
         /// A function for activating a specific upgrade
         /// </summary>
         /// <returns></returns>
-        public void ActivateUpgrade()
+        public void ActivateUpgrade(UpgradeTypes upgradeType)
         {
-            (upgrades[0] as PlayerUpgrade).ActivateUpgrade();
+            upgrades[upgradeType].ActivateUpgrade();
+        }
+
+        public SpriteGameObject ShopSprite
+        {
+            get { return shopSprite; }
+        }
+
+        public string ShopText
+        {
+            get { return shopText.Text; }
+            set { shopText.Text = value; }
         }
     }
 }

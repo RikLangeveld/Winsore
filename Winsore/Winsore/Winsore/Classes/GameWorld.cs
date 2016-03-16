@@ -14,6 +14,7 @@ namespace Winsore
         private Projectile projectile;
         private Shop shop;
         private SpriteGameObject CastleSpriteTest;
+        private DebugMenu debugMenu;
 
 
 
@@ -23,28 +24,34 @@ namespace Winsore
         {
             background = new SpriteGameObject("grass");
             player = new Player();
-            enemy = new Enemy("spr_enemy_placeholder");
+            enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
             projectile = new Projectile("arrow_projectile");
 
             CastleSpriteTest = new SpriteGameObject("spr_castle");
 
-            shop = new Shop();
+            shop = new Shop("winkelwagen");
 
             //add upgrade
-            shop.AddUpgrade(player, "playerSpeed");
+            shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
 
-           
+            debugMenu = new DebugMenu();
 
 
             // Add the grass background to the gameWorld
             this.Add(background);
             this.Add(CastleSpriteTest);
+
+            // Add shop to the GameObjectList of gameworld
+            this.Add(shop);
+
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);
             this.Add(projectile);
 
             CastleSpriteTest.Position = new Vector2 (1300,0);
+
+            Add(debugMenu);
         }
 
         /// <summary>

@@ -11,15 +11,6 @@
       <Time>2016-03-04T15:35:15.504541+01:00</Time>
     </Item>
     <Item>
-      <Source>spr_enemy_placeholder.png</Source>
-      <Name>spr_enemy_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_placeholder.xnb</Output>
-      <Time>2016-03-16T12:18:36.4434838+01:00</Time>
-    </Item>
-    <Item>
       <Source>arrow_projectile.PNG</Source>
       <Name>arrow_projectile</Name>
       <Importer>TextureImporter</Importer>
@@ -80,7 +71,70 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_up.xnb</Output>
-      <Time>2016-03-16T13:56:15.7600512+01:00</Time>
+      <Time>2016-03-16T17:16:21.6314487+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spr_enemy_idle@1x1.png</Source>
+      <Name>spr_enemy_idle@1x1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_idle@1x1.xnb</Output>
+      <Time>2016-03-16T17:16:23.967838+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spr_enemy_walking@2x1.png</Source>
+      <Name>spr_enemy_walking@2x1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_walking@2x1.xnb</Output>
+      <Time>2016-03-16T17:16:23.9688398+01:00</Time>
+    </Item>
+    <Item>
+      <Source>winkelwagen.png</Source>
+      <Name>winkelwagen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\winkelwagen.xnb</Output>
+      <Time>2016-03-16T17:16:23.9698394+01:00</Time>
+    </Item>
+    <Item>
+      <Source>debugmenu.png</Source>
+      <Name>debugmenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\debugmenu.xnb</Output>
+      <Time>2016-03-16T17:16:23.9598381+01:00</Time>
+    </Item>
+    <Item>
+      <Source>shopFont.spritefont</Source>
+      <Name>shopFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopFont.xnb</Output>
+      <Time>2016-03-16T17:16:23.9668375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>DebugFont.spritefont</Source>
+      <Name>DebugFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFont.xnb</Output>
+      <Time>2016-03-16T17:16:23.957833+01:00</Time>
+    </Item>
+    <Item>
+      <Source>DebugFontSmall.spritefont</Source>
+      <Name>DebugFontSmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFontSmall.xnb</Output>
+      <Time>2016-03-16T17:16:23.9588319+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_side.png</Source>
@@ -89,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_side.xnb</Output>
-      <Time>2016-03-16T13:56:15.7454637+01:00</Time>
+      <Time>2016-03-16T17:16:21.6319496+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
