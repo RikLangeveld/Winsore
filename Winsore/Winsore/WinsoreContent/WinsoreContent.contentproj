@@ -37,13 +37,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spr_hero_placeholder.png">
-      <Name>spr_hero_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="spr_enemy_placeholder.png">
       <Name>spr_enemy_placeholder</Name>
       <Importer>TextureImporter</Importer>
@@ -75,6 +68,13 @@
     </Compile>
     <Compile Include="spr_player_walking_up%402x1.PNG">
       <Name>spr_player_walking_up%402x1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Spr_castle.png">
+      <Name>Spr_castle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
