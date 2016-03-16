@@ -14,7 +14,6 @@ namespace Winsore
         private Projectile projectile;
         private Shop shop;
         private SpriteGameObject CastleSpriteTest;
-        private DebugOverlay debugOverlay;
 
 
 
@@ -30,8 +29,6 @@ namespace Winsore
             CastleSpriteTest = new SpriteGameObject("spr_castle");
 
             shop = new Shop("winkelwagen");
-
-            debugOverlay = new DebugOverlay();
 
             //add upgrade
             shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
@@ -50,8 +47,6 @@ namespace Winsore
             this.Add(player);
             this.Add(enemy);
             this.Add(projectile);
-
-            Add(debugOverlay);
 
             CastleSpriteTest.Position = new Vector2 (1300,0);
         }
