@@ -30,9 +30,8 @@ namespace Winsore
 
             Health = 100;
             CalculateRandomVelocity(50, 100);
-            Position = new Vector2(0, 200);
-            //CalculateRandomStartingPosition(0, Winsore.Screen.Y);
-            attackRange = 150;
+            position = new Vector2(0, 300);
+            attackRange = 25;
             aggroRange = 250;
             Mirror = true;
         }
@@ -180,7 +179,7 @@ namespace Winsore
         /// </summary>
         private Vector2 AttackRange
         {
-            get { return new Vector2(attackRange, attackRange); }
+            get { return new Vector2(attackRange + BoundingBox.Width, attackRange + BoundingBox.Height); }
         }
 
         /// <summary>
