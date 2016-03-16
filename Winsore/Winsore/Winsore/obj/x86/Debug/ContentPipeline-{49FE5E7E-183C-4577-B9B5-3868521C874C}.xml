@@ -71,7 +71,25 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb</Output>
-      <Time>2016-03-16T13:08:39.7455454+01:00</Time>
+      <Time>2016-03-16T13:37:51.9968198+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spr_player_idle_up.png</Source>
+      <Name>spr_player_idle_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_up.xnb</Output>
+      <Time>2016-03-16T13:56:15.7600512+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spr_player_side.png</Source>
+      <Name>spr_player_side</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_side.xnb</Output>
+      <Time>2016-03-16T13:56:15.7454637+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

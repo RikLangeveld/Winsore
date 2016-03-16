@@ -72,7 +72,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomRight(float positionX, int width)
         {
-            if (positionX + width > 1920)
+            if (positionX + width/2 > 1920)
                 return true;
             else
                 return false;
@@ -84,9 +84,9 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomLeft(float positionX)
+        public bool IsOutsideRoomLeft(float positionX, int width)
         {
-            if (positionX < 0)
+            if (positionX - width/2 < 0)
                 return true;
             else
                 return false;            
@@ -100,7 +100,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomBelow(float positionY, int height)
         {
-            if (positionY + height > 1080)
+            if (positionY > 1080)
                 return true;
             else
                 return false;
@@ -114,7 +114,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomAbove (float positionY, int height)
         {
-            if (positionY <0 )
+            if (positionY - height < 0 )
                 return true;
             else
                 return false;
