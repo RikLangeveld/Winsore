@@ -14,6 +14,7 @@ namespace Winsore
         private Projectile projectile;
         private Shop shop;
         private SpriteGameObject CastleSpriteTest;
+        private DebugMenu debugMenu;
 
 
 
@@ -33,7 +34,7 @@ namespace Winsore
             //add upgrade
             shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
 
-           
+            debugMenu = new DebugMenu();
 
 
             // Add the grass background to the gameWorld
@@ -49,6 +50,8 @@ namespace Winsore
             this.Add(projectile);
 
             CastleSpriteTest.Position = new Vector2 (1300,0);
+
+            Add(debugMenu);
         }
 
         /// <summary>
