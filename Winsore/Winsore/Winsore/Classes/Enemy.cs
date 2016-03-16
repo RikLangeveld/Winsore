@@ -31,7 +31,7 @@ namespace Winsore
             Health = 100;
             CalculateRandomVelocity(50, 100);
             position = new Vector2(0, 300);
-            attackRange = 25;
+            attackRange = 0;
             aggroRange = 250;
             Mirror = true;
         }

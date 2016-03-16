@@ -24,7 +24,7 @@ namespace Winsore
             background.Position = new Vector2(10, 10);
 
             debugOverlayVersion = new TextGameObject("DebugFont");
-            debugOverlayVersion.Text = "DEBUG OVERLAY VERSION 0.001";
+            debugOverlayVersion.Text = "DEBUG OVERLAY VERSION 0.1";
             debugOverlayVersion.Position = new Vector2(background.BoundingBox.Width / 2, 20);
 
             playerSpeed = new TextGameObject("DebugFontSmall");
