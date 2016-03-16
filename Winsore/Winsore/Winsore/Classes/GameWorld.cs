@@ -21,7 +21,7 @@ namespace Winsore
         public GameWorld()
         {
             background = new SpriteGameObject("grass");
-            player = new Player("sprite_maxim@1x3");
+            player = new Player();
             enemy = new Enemy("spr_enemy_placeholder");
             projectile = new Projectile("arrow_projectile");
 
