@@ -18,5 +18,7 @@ namespace Winsore
         {
             isOfType = type;
         }
+
+        public virtual void ActivateUpgrade() { }
     }
 }

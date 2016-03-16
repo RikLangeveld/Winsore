@@ -143,7 +143,18 @@ namespace Winsore
 
             if (input.KeyPressed(Keys.U))
             {
-                pgw.Shop.ActivateUpgrade();
+                if (Position.X > pgw.Shop.ShopSprite.Position.X 
+                    && Position.Y > pgw.Shop.ShopSprite.Position.Y 
+                    && Position.X < pgw.Shop.ShopSprite.Position.X + pgw.Shop.ShopSprite.Width
+                    && Position.Y < pgw.Shop.ShopSprite.Position.Y + pgw.Shop.ShopSprite.Height)
+                {
+                    pgw.Shop.ActivateUpgrade(UpgradeTypes.PlayerSpeed);
+                    pgw.Shop.ShopText = "Player speed = " + playerSpeed;
+                    Console.WriteLine("ActivateUpgrade() called");
+                }
+
+
+                
             }
 
         }   

@@ -6,3 +6,5 @@ Content\spr_player_walking_down@2x1.xnb
 Content\spr_player_walking_side@2x1.xnb
 Content\spr_player_walking_up@2x1.xnb
 Content\Spr_castle.xnb
+Content\winkelwagen.xnb
+Content\shopFont.xnb
