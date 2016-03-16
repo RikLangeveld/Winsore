@@ -23,7 +23,7 @@ namespace Winsore
         {
             background = new SpriteGameObject("grass");
             player = new Player();
-            enemy = new Enemy("spr_enemy_placeholder");
+            enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
             projectile = new Projectile("arrow_projectile");
 
             CastleSpriteTest = new SpriteGameObject("spr_castle");

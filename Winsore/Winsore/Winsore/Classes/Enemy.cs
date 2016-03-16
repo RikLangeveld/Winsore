@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Winsore
 {
-    class Enemy : SpriteGameObject
+    class Enemy : AnimatedGameObject
     {
         protected int health;           //Levenskracht van de enemy.
         protected int movementSpeed;    //Snelheid waarmee de enemy beweegt
@@ -20,15 +20,46 @@ namespace Winsore
 
         protected float attackRange;    //De range waarop een enemy kan aanvallen, dus archer e.d. hebben hoge range, melee lage range
                                         //Stop met lopen door Wall collider - attackingRange
-        protected float aggroRange;     //De range waarop een enemy de speler of zijn units achterna gaat in plaats van te focussen op de muur                                    
+        protected float aggroRange;     //De range waarop een enemy de speler of zijn units achterna gaat in plaats van te focussen op de muur              
 
-        public Enemy(string assetname) : base(assetname)
+        public Enemy(string idleAnimation, string walkingAnimation) : base(0, "enemy")
         {
-            Reset();
+            LoadAnimation(idleAnimation, "idle", true);
+            LoadAnimation(walkingAnimation, "walkingSide", true);
+            PlayAnimation("walkingSide");
+
+            Health = 100;
+            CalculateRandomVelocity(50, 100);
+            Position = new Vector2(0, 200);
+            //CalculateRandomStartingPosition(0, Winsore.Screen.Y);
+            attackRange = 150;
+            aggroRange = 250;
+            Mirror = true;
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (velocity.X > 0 && GW.Player.Position.X > position.X)
+            {
+                PlayAnimation("walkingSide");
+                Mirror = true;
+            }
+            else if (velocity.X > 0 && GW.Player.Position.X < position.X)
+            {
+                PlayAnimation("walkingSide");
+                Mirror = false;
+            }
+            else if (velocity.X == 0 && GW.Player.Position.X > position.X)
+            {
+                PlayAnimation("idle");
+                Mirror = true;
+            }
+            else if (velocity.X == 0 && GW.Player.Position.X < position.X)
+            {
+                PlayAnimation("idle");
+                Mirror = false;
+            }
+
             if (CollidesWith(GW.Player))
                 velocity = Vector2.Zero;
 
@@ -43,32 +74,15 @@ namespace Winsore
             //Replace with wall collision instead of room.
             if (GW.IsOutsideRoomRight(position.X + AttackRange.X, Width))
                 velocity.X = 0;
-            
+
             if (Health <= 0)
             {
                 DropMoney(1, 2);
-                Reset();            //DELETE ENEMY OBJECT INSTEAD
+                //DELETE ENEMY
             }
 
             base.Update(gameTime);
 
-        }
-        
-        public override void HandleInput(InputHelper inputHelper)
-        {
-            if (inputHelper.KeyPressed(Keys.Z))
-                Reset();
-        }
-
-        public override void Reset()
-        {
-            base.Reset();
-
-            Health = 100;
-            CalculateRandomVelocity(25, 50);
-            CalculateRandomStartingPosition(0, Winsore.Screen.Y);
-            attackRange = 150;
-            aggroRange = 250;
         }
 
         /// <summary>
@@ -78,7 +92,7 @@ namespace Winsore
         /// <param name="maxValue">The maximal velocity of the enemy</param>
         public void CalculateRandomVelocity(int minValue, int maxValue)
         {
-            movementSpeed = GameEnvironment.Random.Next(minValue, maxValue) ;
+            movementSpeed = GameEnvironment.Random.Next(minValue, maxValue);
         }
 
         /// <summary>
@@ -116,6 +130,10 @@ namespace Winsore
                         movementSpeed / 2 / (float)gameTime.ElapsedGameTime.TotalMilliseconds);
 
                 position -= distanceToTarget * velocity;
+            }
+            else
+            {
+                Mirror = true;
             }
         }
 
