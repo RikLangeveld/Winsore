@@ -85,15 +85,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugFont.spritefont">
-      <Name>DebugFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="debugmenu.png">
-      <Name>debugmenu</Name>
     <Compile Include="winkelwagen.png">
       <Name>winkelwagen</Name>
       <Importer>TextureImporter</Importer>
@@ -101,8 +92,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugFontSmall.spritefont">
-      <Name>DebugFontSmall</Name>
     <Compile Include="shopFont.spritefont">
       <Name>shopFont</Name>
       <Importer>FontDescriptionImporter</Importer>

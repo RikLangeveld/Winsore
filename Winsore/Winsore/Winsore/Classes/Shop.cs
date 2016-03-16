@@ -29,6 +29,7 @@ namespace Winsore
 
             // set position
             shopSprite.Position = new Vector2(1700, 100);
+            shopText.Text = "";
             shopText.Position = new Vector2(300, 300);
 
             // add to GameObjectList
