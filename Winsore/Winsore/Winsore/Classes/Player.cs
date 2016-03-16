@@ -149,7 +149,6 @@ namespace Winsore
                     && Position.Y < pgw.Shop.ShopSprite.Position.Y + pgw.Shop.ShopSprite.Height)
                 {
                     pgw.Shop.ActivateUpgrade(UpgradeTypes.PlayerSpeed);
-                    pgw.Shop.ShopText = "Player speed = " + playerSpeed;
                     Console.WriteLine("ActivateUpgrade() called");
                 }
 
