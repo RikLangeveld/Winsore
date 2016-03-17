@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Winsore.Classes;
 
 namespace Winsore
 {
@@ -15,6 +16,7 @@ namespace Winsore
         private Shop shop;
         private SpriteGameObject CastleSpriteTest;
         private DebugMenu debugMenu;
+        private EnemySpawner enemySpawner;
 
 
 
@@ -25,6 +27,9 @@ namespace Winsore
             background = new SpriteGameObject("grass");
             player = new Player();
             enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
+
+            enemySpawner = new EnemySpawner();
+
             projectile = new Projectile("arrow_projectile");
 
             CastleSpriteTest = new SpriteGameObject("spr_castle");
@@ -47,6 +52,7 @@ namespace Winsore
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);
+            this.Add(enemySpawner);
             this.Add(projectile);
 
             CastleSpriteTest.Position = new Vector2 (1300,0);

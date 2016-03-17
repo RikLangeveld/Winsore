@@ -1,3 +1,4 @@
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\WinsoreContent\obj\x86\Debug\WinsoreContent.contentprojResolveAssemblyReference.cache
 C:\Users\Kay\Documents\GitHub\Winsore\Winsore\Winsore\WinsoreContent\obj\x86\Debug\WinsoreContent.contentprojResolveAssemblyReference.cache
 C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\Winsore\Winsore\WinsoreContent\obj\x86\Debug\WinsoreContent.contentprojResolveAssemblyReference.cache
+C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\WinsoreContent\obj\x86\Debug\WinsoreContent.contentprojResolveAssemblyReference.cache
