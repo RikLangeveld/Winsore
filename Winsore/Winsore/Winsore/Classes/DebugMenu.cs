@@ -13,6 +13,7 @@ namespace Winsore
         TextGameObject debugOverlayVersion;
         TextGameObject playerSpeed;
         TextGameObject mousePosition;
+        TextGameObject money;
 
         KeyboardState currentKeyboardState;
         KeyboardState lastKeyboardState;
@@ -34,17 +35,23 @@ namespace Winsore
             mousePosition = new TextGameObject("DebugFontSmall");
             mousePosition.Position = new Vector2(30, 80);
 
+            money = new TextGameObject("DebugFontSmall");
+            money.Position = new Vector2(30, 100);
+
             Add(background);
             Add(debugOverlayVersion);
             Add(playerSpeed);
             Add(mousePosition);
+            Add(money);
         }
 
         public override void Update(GameTime gameTime)
         {
             playerSpeed.Text = "Player.Speed: " + GW.Player.playerSpeed;
 
-            mousePosition.Text = "Mouse Position: X: " + Mouse.GetState().X + ", Y: " + Mouse.GetState().Y; 
+            mousePosition.Text = "Mouse Position: X: " + Mouse.GetState().X + ", Y: " + Mouse.GetState().Y;
+
+            money.Text = "Money: " + GW.Player.Money;
 
             base.Update(gameTime);
         }

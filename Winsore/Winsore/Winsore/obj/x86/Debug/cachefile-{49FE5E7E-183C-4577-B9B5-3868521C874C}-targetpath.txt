@@ -14,3 +14,4 @@ Content\winkelwagen.xnb
 Content\DebugFont.xnb
 Content\DebugFontSmall.xnb
 Content\shopFont.xnb
+Content\shopBackground.xnb

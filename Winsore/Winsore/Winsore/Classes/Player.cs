@@ -40,7 +40,7 @@ namespace Winsore
 
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
-            Money = 0;
+            Money = 100;
             this.PlayAnimation("idleDown");
         }
 
@@ -192,21 +192,6 @@ namespace Winsore
             if (Math.Abs(velocity.Y) > 0 && input.MousePosition.Y < position.Y && velocity.X == 0)
             {
                 PlayAnimation("walkingUp");
-            }
-
-            if (input.KeyPressed(Keys.U))
-            {
-                if (Position.X > pgw.Shop.ShopSprite.Position.X 
-                    && Position.Y > pgw.Shop.ShopSprite.Position.Y 
-                    && Position.X < pgw.Shop.ShopSprite.Position.X + pgw.Shop.ShopSprite.Width
-                    && Position.Y < pgw.Shop.ShopSprite.Position.Y + pgw.Shop.ShopSprite.Height)
-                {
-                    pgw.Shop.ActivateUpgrade(UpgradeTypes.PlayerSpeed);
-                    Console.WriteLine("ActivateUpgrade() called");
-                }
-
-
-                
             }
 
         }   

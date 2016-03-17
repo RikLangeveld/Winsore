@@ -51,6 +51,7 @@ namespace Winsore
 
             CastleSpriteTest.Position = new Vector2 (1300,0);
 
+            Add(shop.ShopBackground);
             Add(debugMenu);
         }
 

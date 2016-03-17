@@ -145,6 +145,15 @@
       <Output>C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopFont.xnb</Output>
       <Time>2016-03-16T14:43:50.6537201+01:00</Time>
     </Item>
+    <Item>
+      <Source>shopBackground.png</Source>
+      <Name>shopBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopBackground.xnb</Output>
+      <Time>2016-03-17T16:20:27.7696245+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{49FE5E7E-183C-4577-B9B5-3868521C874C}</ContentProjectGUID>
