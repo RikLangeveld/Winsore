@@ -17,6 +17,7 @@ namespace Winsore
     {
 
         SpriteGameObject shopSprite;
+        SpriteGameObject shopBuilding;
         GameObjectList shopBackground;
 
         SpriteGameObject shopBackgroundSprite;
@@ -25,10 +26,11 @@ namespace Winsore
 
         Dictionary<UpgradeTypes, Upgrade> upgrades;
 
-        public Shop(string assetname) : base()
+        public Shop(string assetname, string assetnameShopBuilding) : base()
         {
             // initializ variables
             shopSprite = new SpriteGameObject(assetname);
+            shopBuilding = new SpriteGameObject(assetnameShopBuilding);
             shopBackground = new GameObjectList();
             shopBackgroundSprite = new SpriteGameObject("shopBackground");
             shopTitleText = new TextGameObject("shopFont");
@@ -41,8 +43,9 @@ namespace Winsore
             shopBackground.Add(shopUpgradeText);
 
             // set position
-            shopSprite.Position = new Vector2(1700, 100);
+            shopSprite.Position = new Vector2(1500, 200);
             shopBackground.Position = new Vector2(1460, 40);
+            shopBuilding.Position = new Vector2(shopSprite.Position.X, shopSprite.Position.Y - 196);
 
 
             shopTitleText.Text = "Upgrade Shop";
@@ -53,6 +56,7 @@ namespace Winsore
 
             // add to GameObjectList
             Add(shopSprite);
+            Add(shopBuilding);
 
             shopBackground.Visible = false;
 

@@ -59,3 +59,6 @@ C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopF
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFont.xnb
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFontSmall.xnb
 C:\Users\rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_side.xnb
+C:\Users\Rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopBackground.xnb
+C:\Users\Rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_shop.xnb
+C:\Users\Rik\Desktop\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_shop_ground.xnb

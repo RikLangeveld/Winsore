@@ -29,7 +29,7 @@ namespace Winsore
 
             CastleSpriteTest = new SpriteGameObject("spr_castle");
 
-            shop = new Shop("winkelwagen");
+            shop = new Shop("spr_shop_ground", "spr_shop");
 
             //add upgrade
             shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
