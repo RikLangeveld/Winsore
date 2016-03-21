@@ -43,13 +43,14 @@ namespace Winsore
 
             base.LoadContent();
 
+            screen = new Point(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+
             // TODO: use this.Content to load your game content here
             // Adds a playingstate to the game
             gameStateManager.AddGameState("playingState", new GameWorld());
 
             // sets the gamestate to playing
             gameStateManager.SwitchTo("playingState");
-
         }
     }
 }

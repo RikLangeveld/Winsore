@@ -1,9 +1,10 @@
-﻿﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Winsore
 {
@@ -11,6 +12,7 @@ namespace Winsore
     {
         SpriteGameObject background;
         TextGameObject debugOverlayVersion;
+        TextGameObject performance;
         TextGameObject playerSpeed;
         TextGameObject mousePosition;
         TextGameObject money;
@@ -18,6 +20,10 @@ namespace Winsore
 
         KeyboardState currentKeyboardState;
         KeyboardState lastKeyboardState;
+
+        int frameRate = 0;
+        int frameCounter = 0;
+        TimeSpan elapsedTime = TimeSpan.Zero;
 
         public DebugMenu()
         {
@@ -30,20 +36,24 @@ namespace Winsore
             debugOverlayVersion.Text = "DEBUG OVERLAY VERSION 0.1";
             debugOverlayVersion.Position = new Vector2(background.BoundingBox.Width / 2, 20);
 
+            performance = new TextGameObject("DebugFontSmall");
+            performance.Position = new Vector2(30, 60);
+
             playerSpeed = new TextGameObject("DebugFontSmall");
-            playerSpeed.Position = new Vector2(30, 60);
+            playerSpeed.Position = new Vector2(30, 80);
 
             mousePosition = new TextGameObject("DebugFontSmall");
-            mousePosition.Position = new Vector2(30, 80);
+            mousePosition.Position = new Vector2(30, 100);
 
             money = new TextGameObject("DebugFontSmall");
-            money.Position = new Vector2(30, 100);
+            money.Position = new Vector2(30, 120);
 
             enemyCount = new TextGameObject("DebugFontSmall");
-            enemyCount.Position = new Vector2(30, 120);
+            enemyCount.Position = new Vector2(30, 140);
 
             Add(background);
             Add(debugOverlayVersion);
+            Add(performance);
             Add(playerSpeed);
             Add(mousePosition);
             Add(money);
@@ -52,6 +62,18 @@ namespace Winsore
 
         public override void Update(GameTime gameTime)
         {
+            elapsedTime += gameTime.ElapsedGameTime;
+
+            if (elapsedTime > TimeSpan.FromSeconds(1))
+            {
+                elapsedTime -= TimeSpan.FromSeconds(1);
+                frameRate = frameCounter;
+                frameCounter = 0;
+            }
+
+            if (gameTime.TotalGameTime.Milliseconds != 0)
+                performance.Text = "FPS: " + frameRate;
+
             playerSpeed.Text = "Player.Speed: " + GW.Player.playerSpeed;
 
             mousePosition.Text = "Mouse Position: X: " + Mouse.GetState().X + ", Y: " + Mouse.GetState().Y;
@@ -61,6 +83,13 @@ namespace Winsore
             enemyCount.Text = "Enemys: " + GW.EnemySpawner.Counter;
 
             base.Update(gameTime);
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            frameCounter++;
+
+            base.Draw(gameTime, spriteBatch);
         }
 
         public override void HandleInput(InputHelper inputHelper)

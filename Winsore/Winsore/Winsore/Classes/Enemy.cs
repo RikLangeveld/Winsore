@@ -30,7 +30,7 @@ namespace Winsore
 
             Health = 100;
             CalculateRandomVelocity(50, 100);
-            position = new Vector2(0, 300);
+            CalculateRandomStartingPosition(-Width, Winsore.Screen.Y);
             attackRange = 0;
             aggroRange = 250;
             Mirror = true;
@@ -61,9 +61,9 @@ namespace Winsore
 
             if (CollidesWith(GW.Player))
                 velocity = Vector2.Zero;
-
+            else
             velocity = new Vector2(movementSpeed, 0);
-
+            
             MoveTowardsUnit(GW.Player, AggroRange, AttackRange, gameTime);
 
             //If the enemy has a bad spawn position, reset the enemy.
