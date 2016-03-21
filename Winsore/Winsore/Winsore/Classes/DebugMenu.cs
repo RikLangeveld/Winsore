@@ -14,6 +14,7 @@ namespace Winsore
         TextGameObject playerSpeed;
         TextGameObject mousePosition;
         TextGameObject money;
+        TextGameObject enemyCount;
 
         KeyboardState currentKeyboardState;
         KeyboardState lastKeyboardState;
@@ -38,11 +39,15 @@ namespace Winsore
             money = new TextGameObject("DebugFontSmall");
             money.Position = new Vector2(30, 100);
 
+            enemyCount = new TextGameObject("DebugFontSmall");
+            enemyCount.Position = new Vector2(30, 120);
+
             Add(background);
             Add(debugOverlayVersion);
             Add(playerSpeed);
             Add(mousePosition);
             Add(money);
+            Add(enemyCount);
         }
 
         public override void Update(GameTime gameTime)
@@ -52,6 +57,8 @@ namespace Winsore
             mousePosition.Text = "Mouse Position: X: " + Mouse.GetState().X + ", Y: " + Mouse.GetState().Y;
 
             money.Text = "Money: " + GW.Player.Money;
+
+            enemyCount.Text = "Enemys: " + GW.EnemySpawner.Counter;
 
             base.Update(gameTime);
         }

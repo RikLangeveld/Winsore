@@ -11,7 +11,7 @@ namespace Winsore
     {
         private SpriteGameObject background;
         private Player player;
-        private Enemy enemy;
+        //private Enemy enemy;
         private Projectile projectile;
         private Shop shop;
         private SpriteGameObject CastleSpriteTest;
@@ -26,7 +26,7 @@ namespace Winsore
         {
             background = new SpriteGameObject("grass");
             player = new Player();
-            enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
+            //enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
 
             enemySpawner = new EnemySpawner();
 
@@ -51,7 +51,7 @@ namespace Winsore
 
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
-            this.Add(enemy);
+            //this.Add(enemy);
             this.Add(enemySpawner);
             this.Add(projectile);
 
@@ -139,7 +139,10 @@ namespace Winsore
             get { return SCREEN_SIZE; }
         }
 
-        
+        public EnemySpawner EnemySpawner
+        {
+            get { return enemySpawner; }
+        }
 
         public Player Player
         {

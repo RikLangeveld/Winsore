@@ -36,7 +36,10 @@ namespace Winsore.Classes
             base.Update(gameTime);
         }
 
-
+        public int Counter
+        {
+            get { return gameObjects.Count; }
+        }
         // getter voor gameworld
         private GameWorld GW
         {
