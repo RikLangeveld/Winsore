@@ -16,13 +16,13 @@ namespace Winsore
     class Shop : GameObjectList
     {
 
-        SpriteGameObject shopSprite;
-        SpriteGameObject shopBuilding;
-        GameObjectList shopBackground;
+        SpriteGameObject shopSprite;  // shop part
+        SpriteGameObject shopBuilding; // visual part
 
-        SpriteGameObject shopBackgroundSprite;
-        TextGameObject shopTitleText;
-        TextGameObject shopUpgradeText;
+        GameObjectList shopBackground; // shop overlay list
+        SpriteGameObject shopBackgroundSprite; // shop overlay sprite
+        TextGameObject shopTitleText; // shop overlay title text
+        TextGameObject shopUpgradeText; // shop overlay upgrade text
 
         Dictionary<UpgradeTypes, Upgrade> upgrades;
 
