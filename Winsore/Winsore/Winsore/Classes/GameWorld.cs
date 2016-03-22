@@ -13,9 +13,7 @@ namespace Winsore
         private Enemy enemy;
         private Projectile projectile;
         private Shop shop;
-        private SpriteGameObject CastleSpriteTest;
-
-
+        private Wall wall;
 
         protected Vector2 SCREEN_SIZE = new Vector2(1920, 1080);
 
@@ -25,8 +23,9 @@ namespace Winsore
             player = new Player();
             enemy = new Enemy("spr_enemy_placeholder");
             projectile = new Projectile("arrow_projectile");
-
-            CastleSpriteTest = new SpriteGameObject("spr_castle");
+            wall = new Wall();
+            
+            
 
             shop = new Shop();
 
@@ -38,13 +37,16 @@ namespace Winsore
 
             // Add the grass background to the gameWorld
             this.Add(background);
-            this.Add(CastleSpriteTest);
+            this.Add(wall);
+            
+
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
             this.Add(enemy);
             this.Add(projectile);
+            
 
-            CastleSpriteTest.Position = new Vector2 (1300,0);
+            
         }
 
         /// <summary>
