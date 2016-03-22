@@ -8,7 +8,7 @@ namespace Winsore
     class PlayerUpgrade : Upgrade
     {
 
-        string upgradeIdentifier;
+        UpgradeTypes upgradeIdentifier;
 
         /// <summary>
         /// Constructor of PlayerUpgrade
@@ -16,7 +16,7 @@ namespace Winsore
         /// <param name="isOfType">Type of object where the upgrade belongs to</param>
         /// <param name="upgradeID">identifier for the upgrade</param>
         /// <returns></returns>
-        public PlayerUpgrade(SpriteGameObject isOfType, string upgradeID) : base(isOfType)
+        public PlayerUpgrade(SpriteGameObject isOfType, UpgradeTypes upgradeID) : base(isOfType)
         {
             this.upgradeIdentifier = upgradeID;
         }
@@ -25,11 +25,11 @@ namespace Winsore
         /// A function which activates a specific upgrade based on the upgradeIdentifier
         /// </summary>
         /// <returns></returns>
-        public void ActivateUpgrade()
+        public override void ActivateUpgrade()
         {
             switch (upgradeIdentifier)
             {
-                case "playerSpeed":
+                case UpgradeTypes.PlayerSpeed:
                     (isOfType as Player).playerSpeed += 20;
                     break;
                 default:

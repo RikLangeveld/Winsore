@@ -67,3 +67,4 @@ Winsore/Winsore/WinsoreContent/obj/x86/Debug/WinsoreContent.contentprojResolveAs
 Winsore/Winsore/Winsore/bin/x86/Debug/Content/spr_enemy_placeholder.xnb
 *.cache
 *.suo
+*.exe

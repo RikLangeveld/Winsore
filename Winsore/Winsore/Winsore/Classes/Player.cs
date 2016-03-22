@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
@@ -17,26 +18,35 @@ namespace Winsore
         private bool movingUp = false;
         private bool movingDown = false;
 
+        private bool LastframeOutsideRoomAbove = false;
+        private bool LastframeOutsideRoomBelow = false;
+        private bool LastframeOutsideRoomRight = false;
+        private bool LastframeOutsideRoomLeft = false;
+
         public int playerSpeed;
+
+        private Vector2 lastFrameVelocity;
 
         protected int money;
 
         public Player() : base(0, "player")
         {
-            this.LoadAnimation("spr_player_idle_down@1x1", "idle", true);
+            this.LoadAnimation("spr_player_idle_down@1x1", "idleDown", true);
             this.LoadAnimation("spr_player_walking_down@2x1", "walkingDown", true);
             this.LoadAnimation("spr_player_walking_side@2x1", "walkingSide", true);
             this.LoadAnimation("spr_player_walking_up@2x1", "walkingUp", true);
+            this.LoadAnimation("spr_player_idle_up", "idleUp", true);
+            this.LoadAnimation("spr_player_side", "idleSide", true);
 
             position = START_POSITION;
             playerSpeed = START_PLAYER_SPEED;
-            Money = 0;
-            this.PlayAnimation("idle");
+            Money = 100;
+            this.PlayAnimation("idleDown");
         }
 
         public override void Update(GameTime gameTime)
         {
-
+            lastFrameVelocity = velocity;
             base.Update(gameTime);
         }
 
@@ -48,8 +58,9 @@ namespace Winsore
             // Check if is in the room before moving up.
              if (pgw.IsOutsideRoomAbove(position.Y, Height))
             {
-                position = new Vector2(position.X, 0);
+                position = new Vector2(position.X, 0 + Height);
                 movingUp = false;
+                LastframeOutsideRoomAbove = true;
             }
             else if (input.IsKeyDown(Keys.W))
                 movingUp = true;
@@ -59,8 +70,9 @@ namespace Winsore
             // check if in the room before moving down
              if (pgw.IsOutsideRoomBelow(position.Y, Height))
             {
-                position = new Vector2(position.X, pgw.ScreenSize.Y - Height);
+                position = new Vector2(position.X, pgw.ScreenSize.Y);
                 movingDown = false;
+                LastframeOutsideRoomBelow = true;
             } 
             else  if (input.IsKeyDown(Keys.S))
                 movingDown = true;
@@ -68,10 +80,11 @@ namespace Winsore
                 movingDown = false;
 
              //check if in teh room before moving left
-             if (pgw.IsOutsideRoomLeft(position.X))
+             if (pgw.IsOutsideRoomLeft(position.X, Width))
              {
-                position = new Vector2(0, Position.Y);
-               movingDown = false;
+               position = new Vector2(0 + Width /2 , Position.Y);
+               movingLeft = false;
+                LastframeOutsideRoomLeft = true;
              }
              else if (input.IsKeyDown(Keys.A))
                 movingLeft = true;
@@ -81,8 +94,9 @@ namespace Winsore
             // check if in the room before moving right
             if (pgw.IsOutsideRoomRight(position.X, Width))
              {
-                position = new Vector2(pgw.ScreenSize.X - Height, Position.Y);
+                position = new Vector2(pgw.ScreenSize.X - Width / 2, Position.Y);
                 movingRight = false;
+                LastframeOutsideRoomRight = true;
              }
             else if (input.IsKeyDown(Keys.D))
                 movingRight = true;
@@ -99,18 +113,16 @@ namespace Winsore
                 velocity.Y = 0;               
             }
             // Moving down
-            else if (movingDown)
+            else if (movingDown && !LastframeOutsideRoomBelow)
             {
                 velocity.Y = playerSpeed;
-                if (!movingLeft && !movingRight)
-                this.PlayAnimation("walkingDown");
+                LastframeOutsideRoomAbove = false;
             }
             // Moving upwards
-            else if (movingUp)
+            else if (movingUp && !LastframeOutsideRoomAbove)
             {
                 velocity.Y = -playerSpeed;
-                if (!movingRight && !movingLeft)
-                this.PlayAnimation("walkingUp");
+                LastframeOutsideRoomBelow = false;
             }
             // not moving up or down
             else if (!movingUp && !movingDown)
@@ -123,27 +135,63 @@ namespace Winsore
                 velocity.X = 0;
 
             // moving Left
-            else if (movingLeft)
+            else if (movingLeft && !LastframeOutsideRoomLeft)
             {
                 velocity.X = -playerSpeed;
-                this.PlayAnimation("walkingSide");
-                Mirror = true;
+                LastframeOutsideRoomRight = false;
             }
             // moving Right
-            else if (movingRight)
+            else if (movingRight && !LastframeOutsideRoomRight)
             {
                 velocity.X = playerSpeed;
-                this.PlayAnimation("walkingSide");
-                Mirror = false;
+                LastframeOutsideRoomLeft = false;
             }
             // not moving right or left
             else if (!movingRight && !movingLeft)
                 velocity.X = 0;
 
 
-            if (input.KeyPressed(Keys.U))
+            /* Dit stuk van de code regeld dat de juiste animaties geladen worden 
+            tijdens het lopen van de player */
+            if (velocity == Vector2.Zero && input.MousePosition.Y > position.Y)
             {
-                pgw.Shop.ActivateUpgrade();
+                PlayAnimation("idleDown");
+                Mirror = false;
+            }
+            if (velocity == Vector2.Zero && input.MousePosition.Y < position.Y)
+            {
+                PlayAnimation("idleUp");
+                Mirror = false;
+            }
+            if (velocity == Vector2.Zero && input.MousePosition.X < position.X - 200)
+            {
+                PlayAnimation("idleSide");
+                Mirror = true;
+            }
+            if (velocity == Vector2.Zero && input.MousePosition.X > position.X + 200)
+            {
+                PlayAnimation("idleSide");
+                Mirror = false;
+            }
+
+            if (Math.Abs(velocity.X) > 0 && input.MousePosition.X > position.X)
+            {
+                PlayAnimation("walkingSide");
+                Mirror = false;
+            }
+            if (Math.Abs(velocity.X) > 0 && input.MousePosition.X < position.X)
+            {
+                PlayAnimation("walkingSide");
+                Mirror = true;
+            }
+
+            if (Math.Abs(velocity.Y) > 0 && input.MousePosition.Y > position.Y && velocity.X == 0)
+            {
+                PlayAnimation("walkingDown");
+            }
+            if (Math.Abs(velocity.Y) > 0 && input.MousePosition.Y < position.Y && velocity.X == 0)
+            {
+                PlayAnimation("walkingUp");
             }
 
         }   

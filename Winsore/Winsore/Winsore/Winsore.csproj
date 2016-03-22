@@ -57,7 +57,9 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DebugMenu.cs" />
     <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\EnemySpawner.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\GameWorld.cs" />
     <Compile Include="Classes\PlayerUpgrade.cs" />
