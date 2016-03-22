@@ -30,7 +30,13 @@ namespace Winsore.Classes
                 currentTime -= countDuration;
                 enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
                 Add(enemy);
-                // System.Diagnostics.Debug.Print("sexsexsex"); // print dingen naar de debugger om te testen of de code word uitgevoerd
+
+                for (int i = gameObjects.Count - 1; i >= 0; --i)
+                {
+                    Enemy enemy = gameObjects[i] as Enemy;
+                    if (enemy.CollidesWith(GW.Player))
+                        Remove(gameObjects[i]);
+                }
             }
 
             base.Update(gameTime);
