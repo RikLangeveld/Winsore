@@ -11,22 +11,16 @@
 *.userprefs
 
 # Build results
-[Dd]ebug\
-Debug/
-Debug\
+[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
 x64/
-x86\
-x86/[Dd]ebug/
+x86/
 bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-obj
-bin
-debug
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -249,4 +243,3 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
-*.cachefile
