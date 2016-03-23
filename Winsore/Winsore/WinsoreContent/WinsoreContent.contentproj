@@ -37,13 +37,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spr_enemy_placeholder.png">
-      <Name>spr_enemy_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="arrow_projectile.PNG">
       <Name>arrow_projectile</Name>
       <Importer>TextureImporter</Importer>
