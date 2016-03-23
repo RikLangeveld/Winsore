@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Winsore.Classes;
 
 namespace Winsore
 {
@@ -11,14 +10,10 @@ namespace Winsore
     {
         private SpriteGameObject background;
         private Player player;
-        //private Enemy enemy;
+        private Enemy enemy;
         private Projectile projectile;
         private Shop shop;
-        private SpriteGameObject CastleSpriteTest;
-        private DebugMenu debugMenu;
-        private EnemySpawner enemySpawner;
-
-
+        private Wall wall;
 
         protected Vector2 SCREEN_SIZE = new Vector2(1920, 1080);
 
@@ -26,39 +21,32 @@ namespace Winsore
         {
             background = new SpriteGameObject("grass");
             player = new Player();
-            //enemy = new Enemy("spr_enemy_idle@1x1", "spr_enemy_walking@2x1");
-
-            enemySpawner = new EnemySpawner();
-
+            enemy = new Enemy("spr_enemy_placeholder");
             projectile = new Projectile("arrow_projectile");
+            wall = new Wall();
+            
+            
 
-            CastleSpriteTest = new SpriteGameObject("spr_castle");
-
-            shop = new Shop("spr_shop_ground", "spr_shop");
+            shop = new Shop();
 
             //add upgrade
-            shop.AddUpgrade(player, UpgradeTypes.PlayerSpeed);
+            shop.AddUpgrade(player, "playerSpeed");
 
-            debugMenu = new DebugMenu();
+           
 
 
             // Add the grass background to the gameWorld
             this.Add(background);
-            this.Add(CastleSpriteTest);
-
-            // Add shop to the GameObjectList of gameworld
-            this.Add(shop);
+            this.Add(wall);
+            
 
             // Add the player to the GameObjectList of gameWorld
             this.Add(player);
-            //this.Add(enemy);
-            this.Add(enemySpawner);
+            this.Add(enemy);
             this.Add(projectile);
+            
 
-            CastleSpriteTest.Position = new Vector2 (1300,0);
-
-            Add(shop.ShopBackground);
-            Add(debugMenu);
+            
         }
 
         /// <summary>
@@ -86,7 +74,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomRight(float positionX, int width)
         {
-            if (positionX + width/2 > 1920)
+            if (positionX + width > 1920)
                 return true;
             else
                 return false;
@@ -98,9 +86,9 @@ namespace Winsore
         /// <param name="position">position of the object</param>
         /// <param name="width">width of the object</param>
         /// <returns></returns>
-        public bool IsOutsideRoomLeft(float positionX, int width)
+        public bool IsOutsideRoomLeft(float positionX)
         {
-            if (positionX - width/2 < 0)
+            if (positionX < 0)
                 return true;
             else
                 return false;            
@@ -114,7 +102,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomBelow(float positionY, int height)
         {
-            if (positionY > 1080)
+            if (positionY + height > 1080)
                 return true;
             else
                 return false;
@@ -128,7 +116,7 @@ namespace Winsore
         /// <returns></returns>
         public bool IsOutsideRoomAbove (float positionY, int height)
         {
-            if (positionY - height < 0 )
+            if (positionY <0 )
                 return true;
             else
                 return false;
@@ -139,10 +127,7 @@ namespace Winsore
             get { return SCREEN_SIZE; }
         }
 
-        public EnemySpawner EnemySpawner
-        {
-            get { return enemySpawner; }
-        }
+        
 
         public Player Player
         {

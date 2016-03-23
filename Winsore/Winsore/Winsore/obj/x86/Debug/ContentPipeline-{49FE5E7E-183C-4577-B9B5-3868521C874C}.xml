@@ -7,8 +7,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb</Output>
-      <Time>2016-03-17T21:45:33.0593121+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Grass.xnb</Output>
+      <Time>2016-03-16T13:27:11.0589862+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spr_enemy_placeholder.png</Source>
+      <Name>spr_enemy_placeholder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_placeholder.xnb</Output>
+      <Time>2016-03-16T13:27:11.0749963+01:00</Time>
     </Item>
     <Item>
       <Source>arrow_projectile.PNG</Source>
@@ -16,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\arrow_projectile.xnb</Output>
-      <Time>2016-03-17T21:45:33.0905644+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\arrow_projectile.xnb</Output>
+      <Time>2016-03-16T13:27:11.0629871+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_idle_down@1x1.PNG</Source>
@@ -25,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_down@1x1.xnb</Output>
-      <Time>2016-03-17T21:45:33.1374428+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_down@1x1.xnb</Output>
+      <Time>2016-03-16T13:27:11.0774981+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_down@2x1.PNG</Source>
@@ -34,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_down@2x1.xnb</Output>
-      <Time>2016-03-17T21:45:33.1686915+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_down@2x1.xnb</Output>
+      <Time>2016-03-16T13:27:11.0784982+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_side@2x1.PNG</Source>
@@ -43,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_side@2x1.xnb</Output>
-      <Time>2016-03-17T21:45:33.1686915+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_side@2x1.xnb</Output>
+      <Time>2016-03-16T13:27:11.0794995+01:00</Time>
     </Item>
     <Item>
       <Source>spr_player_walking_up@2x1.PNG</Source>
@@ -52,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_up@2x1.xnb</Output>
-      <Time>2016-03-17T21:45:33.1843197+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_walking_up@2x1.xnb</Output>
+      <Time>2016-03-16T13:27:11.0804989+01:00</Time>
     </Item>
     <Item>
       <Source>Spr_castle.png</Source>
@@ -61,116 +70,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb</Output>
-      <Time>2016-03-17T21:46:41.9862195+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle.xnb</Output>
+      <Time>2016-03-16T13:50:45.307581+01:00</Time>
     </Item>
     <Item>
-      <Source>spr_player_idle_up.png</Source>
-      <Name>spr_player_idle_up</Name>
+      <Source>Spr_castle_front.png</Source>
+      <Name>Spr_castle_front</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_idle_up.xnb</Output>
-      <Time>2016-03-17T21:46:42.0022194+01:00</Time>
-    </Item>
-    <Item>
-      <Source>spr_player_side.png</Source>
-      <Name>spr_player_side</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_player_side.xnb</Output>
-      <Time>2016-03-17T21:46:42.0022194+01:00</Time>
-    </Item>
-    <Item>
-      <Source>debugmenu.png</Source>
-      <Name>debugmenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\debugmenu.xnb</Output>
-      <Time>2016-03-17T21:46:41.990219+01:00</Time>
-    </Item>
-    <Item>
-      <Source>spr_enemy_idle@1x1.png</Source>
-      <Name>spr_enemy_idle@1x1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_idle@1x1.xnb</Output>
-      <Time>2016-03-17T21:46:41.9982191+01:00</Time>
-    </Item>
-    <Item>
-      <Source>spr_enemy_walking@2x1.png</Source>
-      <Name>spr_enemy_walking@2x1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_enemy_walking@2x1.xnb</Output>
-      <Time>2016-03-17T21:46:41.9982191+01:00</Time>
-    </Item>
-    <Item>
-      <Source>winkelwagen.png</Source>
-      <Name>winkelwagen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\winkelwagen.xnb</Output>
-      <Time>2016-03-17T21:46:42.0022194+01:00</Time>
-    </Item>
-    <Item>
-      <Source>shopBackground.png</Source>
-      <Name>shopBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopBackground.xnb</Output>
-      <Time>2016-03-17T21:46:41.9982191+01:00</Time>
-    </Item>
-    <Item>
-      <Source>spr_shop_ground.png</Source>
-      <Name>spr_shop_ground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_shop_ground.xnb</Output>
-      <Time>2016-03-17T21:46:42.0022194+01:00</Time>
-    </Item>
-    <Item>
-      <Source>spr_shop.png</Source>
-      <Name>spr_shop</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\spr_shop.xnb</Output>
-      <Time>2016-03-17T21:46:42.0022194+01:00</Time>
-    </Item>
-    <Item>
-      <Source>DebugFont.spritefont</Source>
-      <Name>DebugFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFont.xnb</Output>
-      <Time>2016-03-17T21:46:41.9862195+01:00</Time>
-    </Item>
-    <Item>
-      <Source>DebugFontSmall.spritefont</Source>
-      <Name>DebugFontSmall</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\DebugFontSmall.xnb</Output>
-      <Time>2016-03-17T21:46:41.9862195+01:00</Time>
-    </Item>
-    <Item>
-      <Source>shopFont.spritefont</Source>
-      <Name>shopFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\shopFont.xnb</Output>
-      <Time>2016-03-17T21:46:41.9982191+01:00</Time>
+      <Output>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\Spr_castle_front.xnb</Output>
+      <Time>2016-03-16T14:39:58.0762844+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -179,10 +89,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\WinsoreContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Dputten\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\WinsoreContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Naomi\Documents\GitHub\Winsore\Winsore\Winsore\Winsore\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -211,7 +121,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-02-13T03:19:30.3099867+01:00</Value>
+        <Value>2016-02-08T12:34:53.9206513+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -16,15 +16,9 @@ C:\Users\Rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.csprojR
 C:\Users\Rik\Desktop\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
 C:\Users\Rik\Desktop\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\bin\x86\Debug\GameManagement.dll
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\bin\x86\Debug\GameManagement.pdb
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\obj\x86\Debug\GameManagement.csprojResolveAssemblyReference.cache
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
-C:\Users\Ricardo Desmedt\Documents\Visual Studio 2015\Projects\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\bin\x86\Debug\GameManagement.dll
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\bin\x86\Debug\GameManagement.pdb
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.csprojResolveAssemblyReference.cache
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
-C:\Users\Dputten\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\bin\x86\Debug\GameManagement.dll
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\bin\x86\Debug\GameManagement.pdb
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.csprojResolveAssemblyReference.cache
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.dll
+C:\Users\Naomi\Documents\GitHub\Winsore\GameManagement\obj\x86\Debug\GameManagement.pdb
